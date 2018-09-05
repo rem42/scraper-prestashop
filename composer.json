@@ -1,0 +1,20 @@
+{
+  "name" : "rem42/scraper-prestashop",
+  "description" : "API Prestashop 1.7",
+  "license": "MIT",
+  "authors" : [{
+    "name" : "rem42",
+    "email" : "me@remy.ovh",
+    "homepage": "https://remy.ovh"
+  }],
+  "require" : {
+    "php": ">=5.5.9",
+    "jms/serializer-bundle": "^2.0",
+    "rem42/scraper": "^1.0"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "Scraper\\ScraperPrestashop\\" : ""
+    }
+  }
+}
