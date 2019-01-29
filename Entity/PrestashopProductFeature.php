@@ -7,11 +7,17 @@ use JMS\Serializer\Annotation as Serializer;
 class PrestashopProductFeature
 {
 	/**
-	 * @var integer
+	 * @var int
 	 * @Serializer\Type("integer")
 	 * @Serializer\SerializedName("id")
 	 */
 	protected $id;
+    /**
+     * @var int
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("id_feature_value")
+     */
+    protected $idFeatureValue;
 	/**
 	 * @var string
 	 * @Serializer\Type("string")
@@ -43,6 +49,25 @@ class PrestashopProductFeature
 		$this->id = $id;
 		return $this;
 	}
+
+    /**
+     * @return int
+     */
+    public function getIdFeatureValue(): ?int
+    {
+        return $this->idFeatureValue;
+    }
+
+    /**
+     * @param int $idFeatureValue
+     *
+     * @return $this
+     */
+    public function setIdFeatureValue(?int $idFeatureValue): self
+    {
+        $this->idFeatureValue = $idFeatureValue;
+        return $this;
+    }
 
     /**
      * @return string
