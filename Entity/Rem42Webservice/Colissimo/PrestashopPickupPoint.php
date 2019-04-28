@@ -13,6 +13,12 @@ class PrestashopPickupPoint
      */
     protected $id;
     /**
+     * @var integer
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("id_order")
+     */
+    protected $idOrder;
+    /**
      * @var string
      * @Serializer\Type("string")
      * @Serializer\SerializedName("colissimo_id")
@@ -107,6 +113,25 @@ class PrestashopPickupPoint
     public function setId(?int $id)
     {
         $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdOrder(): ?int
+    {
+        return $this->idOrder;
+    }
+
+    /**
+     * @param int $idOrder
+     *
+     * @return $this
+     */
+    public function setIdOrder(?int $idOrder)
+    {
+        $this->idOrder = $idOrder;
         return $this;
     }
 
