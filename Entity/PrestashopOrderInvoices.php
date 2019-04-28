@@ -7,33 +7,32 @@ use JMS\Serializer\Annotation as Serializer;
 
 /**
  * Class PrestashopOrderInvoices
- * @package Scraper\ScraperPrestashop\Entity
  */
 class PrestashopOrderInvoices
 {
-	/**
-	 * @var ArrayCollection|PrestashopOrderInvoice[]
-	 * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopOrderInvoice>")
-	 * @Serializer\SerializedName("order_invoices")
-	 */
-	protected $orderInvoices;
+    /**
+     * @var ArrayCollection|PrestashopOrderInvoice[]
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopOrderInvoice>")
+     * @Serializer\SerializedName("order_invoices")
+     */
+    protected $orderInvoices;
 
-	/**
-	 * @return ArrayCollection|PrestashopOrderInvoice[]
-	 */
-	public function getOrderInvoices()
-	{
-		return $this->orderInvoices;
-	}
+    /**
+     * @return ArrayCollection|PrestashopOrderInvoice[]
+     */
+    public function getOrderInvoices()
+    {
+        return $this->orderInvoices;
+    }
 
-	/**
-	 * @param ArrayCollection|PrestashopOrderInvoice[] $orderInvoices
-	 *
-	 * @return $this
-	 */
-	public function setOrderInvoices($orderInvoices)
-	{
-		$this->orderInvoices = $orderInvoices;
-		return $this;
-	}
+    /**
+     * @param ArrayCollection|PrestashopOrderInvoice[] $orderInvoices
+     *
+     * @return $this
+     */
+    public function setOrderInvoices($orderInvoices)
+    {
+        $this->orderInvoices = $orderInvoices;
+        return $this;
+    }
 }

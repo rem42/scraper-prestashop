@@ -7,28 +7,29 @@ use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopImages
 {
-	/**
-	 * @var ArrayCollection|PrestashopImage[]
-	 * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopImage>")
-	 * @Serializer\SerializedName("images")
-	 */
-	protected $images;
+    /**
+     * @var ArrayCollection|PrestashopImage[]
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopImage>")
+     * @Serializer\SerializedName("images")
+     */
+    protected $images;
 
-	/**
-	 * @return ArrayCollection|PrestashopImage[]
-	 */
-	public function getImages()
-	{
-		return $this->images;
-	}
+    /**
+     * @return ArrayCollection|PrestashopImage[]
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
 
-	/**
-	 * @param ArrayCollection|PrestashopImage[] $images
-	 * @return $this
-	 */
-	public function setImages($images)
-	{
-		$this->images = $images;
-		return $this;
-	}
+    /**
+     * @param ArrayCollection|PrestashopImage[] $images
+     *
+     * @return $this
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+        return $this;
+    }
 }

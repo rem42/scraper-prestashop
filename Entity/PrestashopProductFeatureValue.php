@@ -6,30 +6,30 @@ use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopProductFeatureValue
 {
-	/**
-	 * @var integer
-	 * @Serializer\Type("integer")
-	 * @Serializer\SerializedName("id")
-	 */
-	protected $id;
-	/**
-	 * @var string
-	 * @Serializer\Type("string")
-	 * @Serializer\SerializedName("id_feature")
-	 */
-	protected $idFeature;
-	/**
-	 * @var bool
-	 * @Serializer\Type("bool")
-	 * @Serializer\SerializedName("custom")
-	 */
-	protected $custom;
-	/**
-	 * @var string
-	 * @Serializer\Type("string")
-	 * @Serializer\SerializedName("value")
-	 */
-	protected $value;
+    /**
+     * @var integer
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("id")
+     */
+    protected $id;
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("id_feature")
+     */
+    protected $idFeature;
+    /**
+     * @var bool
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("custom")
+     */
+    protected $custom;
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("value")
+     */
+    protected $value;
 
     /**
      * @return int

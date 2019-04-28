@@ -6,49 +6,49 @@ use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopProductFeature
 {
-	/**
-	 * @var int
-	 * @Serializer\Type("integer")
-	 * @Serializer\SerializedName("id")
-	 */
-	protected $id;
+    /**
+     * @var int
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("id")
+     */
+    protected $id;
     /**
      * @var int
      * @Serializer\Type("integer")
      * @Serializer\SerializedName("id_feature_value")
      */
     protected $idFeatureValue;
-	/**
-	 * @var string
-	 * @Serializer\Type("string")
-	 * @Serializer\SerializedName("position")
-	 */
-	protected $position;
-	/**
-	 * @var string
-	 * @Serializer\Type("string")
-	 * @Serializer\SerializedName("name")
-	 */
-	protected $name;
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("position")
+     */
+    protected $position;
+    /**
+     * @var string
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("name")
+     */
+    protected $name;
 
-	/**
-	 * @return int
-	 */
-	public function getId(): ?int
-	{
-		return $this->id;
-	}
+    /**
+     * @return int
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
-	/**
-	 * @param int $id
+    /**
+     * @param int $id
      *
-	 * @return $this
-	 */
-	public function setId(?int $id): self
-	{
-		$this->id = $id;
-		return $this;
-	}
+     * @return $this
+     */
+    public function setId(?int $id): self
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * @return int

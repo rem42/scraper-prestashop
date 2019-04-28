@@ -7,28 +7,29 @@ use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopStates
 {
-	/**
-	 * @var ArrayCollection|PrestashopState[]
-	 * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopState>")
-	 * @Serializer\SerializedName("states")
-	 */
-	protected $states;
+    /**
+     * @var ArrayCollection|PrestashopState[]
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopState>")
+     * @Serializer\SerializedName("states")
+     */
+    protected $states;
 
-	/**
-	 * @return ArrayCollection|PrestashopState[]
-	 */
-	public function getStates()
-	{
-		return $this->states;
-	}
+    /**
+     * @return ArrayCollection|PrestashopState[]
+     */
+    public function getStates()
+    {
+        return $this->states;
+    }
 
-	/**
-	 * @param ArrayCollection|PrestashopState[] $states
-	 * @return $this
-	 */
-	public function setStates($states)
-	{
-		$this->states = $states;
-		return $this;
-	}
+    /**
+     * @param ArrayCollection|PrestashopState[] $states
+     *
+     * @return $this
+     */
+    public function setStates($states)
+    {
+        $this->states = $states;
+        return $this;
+    }
 }

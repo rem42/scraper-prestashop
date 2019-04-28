@@ -7,28 +7,29 @@ use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopCarriers
 {
-	/**
-	 * @var ArrayCollection|PrestashopCarrier[]
-	 * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopCarrier>")
-	 * @Serializer\SerializedName("carriers")
-	 */
-	protected $carriers;
+    /**
+     * @var ArrayCollection|PrestashopCarrier[]
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopCarrier>")
+     * @Serializer\SerializedName("carriers")
+     */
+    protected $carriers;
 
-	/**
-	 * @return ArrayCollection|PrestashopCarrier[]
-	 */
-	public function getCarriers()
-	{
-		return $this->carriers;
-	}
+    /**
+     * @return ArrayCollection|PrestashopCarrier[]
+     */
+    public function getCarriers()
+    {
+        return $this->carriers;
+    }
 
-	/**
-	 * @param ArrayCollection|PrestashopCarrier[] $carriers
-	 * @return $this
-	 */
-	public function setCarriers($carriers)
-	{
-		$this->carriers = $carriers;
-		return $this;
-	}
+    /**
+     * @param ArrayCollection|PrestashopCarrier[] $carriers
+     *
+     * @return $this
+     */
+    public function setCarriers($carriers)
+    {
+        $this->carriers = $carriers;
+        return $this;
+    }
 }
