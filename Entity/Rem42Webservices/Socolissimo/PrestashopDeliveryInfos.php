@@ -1,6 +1,6 @@
 <?php
 
-namespace Scraper\ScraperPrestashop\Entity\Rem42Webservice\Socolissimo;
+namespace Scraper\ScraperPrestashop\Entity\Rem42Webservices\Socolissimo;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
@@ -9,7 +9,7 @@ class PrestashopDeliveryInfos
 {
     /**
      * @var ArrayCollection|PrestashopDeliveryInfo[]
-     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\Rem42Webservice\Socolissimo\PrestashopDeliveryInfo>")
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\Rem42Webservices\Socolissimo\PrestashopDeliveryInfo>")
      * @Serializer\SerializedName("delivery_infos")
      */
     protected $deliveryInfos;

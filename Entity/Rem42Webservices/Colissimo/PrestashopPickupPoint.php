@@ -1,6 +1,6 @@
 <?php
 
-namespace Scraper\ScraperPrestashop\Entity\Rem42Webservice\Colissimo;
+namespace Scraper\ScraperPrestashop\Entity\Rem42Webservices\Colissimo;
 
 use JMS\Serializer\Annotation as Serializer;
 

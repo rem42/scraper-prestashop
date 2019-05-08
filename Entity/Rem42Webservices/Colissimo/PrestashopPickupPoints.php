@@ -1,6 +1,6 @@
 <?php
 
-namespace Scraper\ScraperPrestashop\Entity\Rem42Webservice\Colissimo;
+namespace Scraper\ScraperPrestashop\Entity\Rem42Webservices\Colissimo;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
@@ -9,7 +9,7 @@ class PrestashopPickupPoints
 {
     /**
      * @var ArrayCollection|PrestashopPickupPoint[]
-     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\Rem42Webservice\Colissimo\PrestashopPickupPoint>")
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\Rem42Webservices\Colissimo\PrestashopPickupPoint>")
      * @Serializer\SerializedName("pickup_points")
      */
     protected $pickupPoints;
