@@ -149,11 +149,15 @@ class PrestashopGetApi extends PrestashopApi
     protected static $rem42Webservices = [
         'delivery_infos',
         'pickup_points',
+        'tntofficiel_receivers',
+        'tntofficiel_orders',
     ];
 
     protected static $rem42WebservicesGet = [
         'delivery_info',
         'pickup_point',
+        'tntofficiel_receiver',
+        'tntofficiel_order',
     ];
 
     public function execute()
