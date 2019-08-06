@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopCountry
@@ -67,8 +68,8 @@ class PrestashopCountry
      */
     protected $displayTaxLabel;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("name")
      */
     protected $name;
@@ -247,17 +248,36 @@ class PrestashopCountry
     /**
      * @return string
      */
-    public function getName(): ?string
+    public function getZipCodeFormat(): ?string
+    {
+        return $this->zipCodeFormat;
+    }
+
+    /**
+     * @param string $zipCodeFormat
+     *
+     * @return $this
+     */
+    public function setZipCodeFormat(?string $zipCodeFormat)
+    {
+        $this->zipCodeFormat = $zipCodeFormat;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|PrestashopItem[]
+     */
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param ArrayCollection|PrestashopItem[] $name
      *
      * @return $this
      */
-    public function setName(?string $name)
+    public function setName($name)
     {
         $this->name = $name;
         return $this;

@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopCarrier
@@ -133,8 +134,8 @@ class PrestashopCarrier
      */
     protected $position;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("delay")
      */
     protected $delay;
@@ -539,19 +540,19 @@ class PrestashopCarrier
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getDelay(): ?string
+    public function getDelay()
     {
         return $this->delay;
     }
 
     /**
-     * @param string $delay
+     * @param ArrayCollection|PrestashopItem[] $delay
      *
      * @return $this
      */
-    public function setDelay(?string $delay)
+    public function setDelay($delay)
     {
         $this->delay = $delay;
         return $this;

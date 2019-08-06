@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopProductOption
@@ -31,14 +32,14 @@ class PrestashopProductOption
      */
     protected $position;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("name")
      */
     protected $name;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("public_name")
      */
     protected $publicName;
@@ -126,38 +127,38 @@ class PrestashopProductOption
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getName(): ?string
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param ArrayCollection|PrestashopItem[] $name
      *
      * @return $this
      */
-    public function setName(?string $name)
+    public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getPublicName(): ?string
+    public function getPublicName()
     {
         return $this->publicName;
     }
 
     /**
-     * @param string $publicName
+     * @param ArrayCollection|PrestashopItem[] $publicName
      *
      * @return $this
      */
-    public function setPublicName(?string $publicName)
+    public function setPublicName($publicName)
     {
         $this->publicName = $publicName;
         return $this;

@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopOrderState
@@ -91,14 +92,14 @@ class PrestashopOrderState
      */
     protected $deleted;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("name")
      */
     protected $name;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("template")
      */
     protected $template;
@@ -370,38 +371,38 @@ class PrestashopOrderState
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getName(): ?string
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param ArrayCollection|PrestashopItem[] $name
      *
      * @return $this
      */
-    public function setName(?string $name)
+    public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getTemplate(): ?string
+    public function getTemplate()
     {
         return $this->template;
     }
 
     /**
-     * @param string $template
+     * @param ArrayCollection|PrestashopItem[] $template
      *
      * @return $this
      */
-    public function setTemplate(?string $template)
+    public function setTemplate($template)
     {
         $this->template = $template;
         return $this;

@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopProductFeature
@@ -25,8 +26,8 @@ class PrestashopProductFeature
      */
     protected $position;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var ArrayCollection|PrestashopItem[]
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("name")
      */
     protected $name;
@@ -89,19 +90,19 @@ class PrestashopProductFeature
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getName(): ?string
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param ArrayCollection|PrestashopItem[] $name
      *
      * @return $this
      */
-    public function setName(?string $name): self
+    public function setName($name)
     {
         $this->name = $name;
         return $this;

@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use JMS\Serializer\Annotation as Serializer;
 
 class PrestashopProduct
@@ -181,6 +182,24 @@ class PrestashopProduct
      */
     protected $state;
     /**
+     * @var integer
+     * @Serializer\Type("integer")
+     * @Serializer\SerializedName("additional_delivery_times")
+     */
+    protected $additionalDeliveryTimes;
+    /**
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
+     * @Serializer\SerializedName("delivery_in_stock")
+     */
+    protected $deliveryInStock;
+    /**
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
+     * @Serializer\SerializedName("delivery_out_stock")
+     */
+    protected $deliveryOutStock;
+    /**
      * @var boolean
      * @Serializer\Type("boolean")
      * @Serializer\SerializedName("on_sale")
@@ -337,56 +356,56 @@ class PrestashopProduct
      */
     protected $packStockType;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("meta_description")
      */
     protected $metaDescription;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("meta_keywords")
      */
     protected $metaKeywords;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("meta_title")
      */
     protected $metaTitle;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("link_rewrite")
      */
     protected $linkRewrite;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("name")
      */
     protected $name;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("description")
      */
     protected $description;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("description_short")
      */
     protected $descriptionShort;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("available_now")
      */
     protected $availableNow;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var PrestashopItem[]|ArrayCollection
+     * @Serializer\Type("ArrayCollection<Scraper\ScraperPrestashop\Entity\PrestashopItem>")
      * @Serializer\SerializedName("available_later")
      */
     protected $availableLater;
@@ -949,6 +968,63 @@ class PrestashopProduct
     }
 
     /**
+     * @return int
+     */
+    public function getAdditionalDeliveryTimes(): ?int
+    {
+        return $this->additionalDeliveryTimes;
+    }
+
+    /**
+     * @param int $additionalDeliveryTimes
+     *
+     * @return $this
+     */
+    public function setAdditionalDeliveryTimes(?int $additionalDeliveryTimes)
+    {
+        $this->additionalDeliveryTimes = $additionalDeliveryTimes;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|PrestashopItem[]
+     */
+    public function getDeliveryInStock()
+    {
+        return $this->deliveryInStock;
+    }
+
+    /**
+     * @param ArrayCollection|PrestashopItem[] $deliveryInStock
+     *
+     * @return $this
+     */
+    public function setDeliveryInStock($deliveryInStock)
+    {
+        $this->deliveryInStock = $deliveryInStock;
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|PrestashopItem[]
+     */
+    public function getDeliveryOutStock()
+    {
+        return $this->deliveryOutStock;
+    }
+
+    /**
+     * @param ArrayCollection|PrestashopItem[] $deliveryOutStock
+     *
+     * @return $this
+     */
+    public function setDeliveryOutStock($deliveryOutStock)
+    {
+        $this->deliveryOutStock = $deliveryOutStock;
+        return $this;
+    }
+
+    /**
      * @return bool
      */
     public function isOnSale(): ?bool
@@ -1443,171 +1519,171 @@ class PrestashopProduct
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getMetaDescription(): ?string
+    public function getMetaDescription()
     {
         return $this->metaDescription;
     }
 
     /**
-     * @param string $metaDescription
+     * @param ArrayCollection|PrestashopItem[] $metaDescription
      *
      * @return $this
      */
-    public function setMetaDescription(?string $metaDescription)
+    public function setMetaDescription($metaDescription)
     {
         $this->metaDescription = $metaDescription;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getMetaKeywords(): ?string
+    public function getMetaKeywords()
     {
         return $this->metaKeywords;
     }
 
     /**
-     * @param string $metaKeywords
+     * @param ArrayCollection|PrestashopItem[] $metaKeywords
      *
      * @return $this
      */
-    public function setMetaKeywords(?string $metaKeywords)
+    public function setMetaKeywords($metaKeywords)
     {
         $this->metaKeywords = $metaKeywords;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getMetaTitle(): ?string
+    public function getMetaTitle()
     {
         return $this->metaTitle;
     }
 
     /**
-     * @param string $metaTitle
+     * @param ArrayCollection|PrestashopItem[] $metaTitle
      *
      * @return $this
      */
-    public function setMetaTitle(?string $metaTitle)
+    public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getLinkRewrite(): ?string
+    public function getLinkRewrite()
     {
         return $this->linkRewrite;
     }
 
     /**
-     * @param string $linkRewrite
+     * @param ArrayCollection|PrestashopItem[] $linkRewrite
      *
      * @return $this
      */
-    public function setLinkRewrite(?string $linkRewrite)
+    public function setLinkRewrite($linkRewrite)
     {
         $this->linkRewrite = $linkRewrite;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getName(): ?string
+    public function getName()
     {
         return $this->name;
     }
 
     /**
-     * @param string $name
+     * @param ArrayCollection|PrestashopItem[] $name
      *
      * @return $this
      */
-    public function setName(?string $name)
+    public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getDescription(): ?string
+    public function getDescription()
     {
         return $this->description;
     }
 
     /**
-     * @param string $description
+     * @param ArrayCollection|PrestashopItem[] $description
      *
      * @return $this
      */
-    public function setDescription(?string $description)
+    public function setDescription($description)
     {
         $this->description = $description;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getDescriptionShort(): ?string
+    public function getDescriptionShort()
     {
         return $this->descriptionShort;
     }
 
     /**
-     * @param string $descriptionShort
+     * @param ArrayCollection|PrestashopItem[] $descriptionShort
      *
      * @return $this
      */
-    public function setDescriptionShort(?string $descriptionShort)
+    public function setDescriptionShort($descriptionShort)
     {
         $this->descriptionShort = $descriptionShort;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getAvailableNow(): ?string
+    public function getAvailableNow()
     {
         return $this->availableNow;
     }
 
     /**
-     * @param string $availableNow
+     * @param ArrayCollection|PrestashopItem[] $availableNow
      *
      * @return $this
      */
-    public function setAvailableNow(?string $availableNow)
+    public function setAvailableNow($availableNow)
     {
         $this->availableNow = $availableNow;
         return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayCollection|PrestashopItem[]
      */
-    public function getAvailableLater(): ?string
+    public function getAvailableLater()
     {
         return $this->availableLater;
     }
 
     /**
-     * @param string $availableLater
+     * @param ArrayCollection|PrestashopItem[] $availableLater
      *
      * @return $this
      */
-    public function setAvailableLater(?string $availableLater)
+    public function setAvailableLater($availableLater)
     {
         $this->availableLater = $availableLater;
         return $this;

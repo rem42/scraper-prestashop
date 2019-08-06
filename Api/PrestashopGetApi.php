@@ -2,7 +2,9 @@
 
 namespace Scraper\ScraperPrestashop\Api;
 
+use JMS\Serializer\EventDispatcher\EventDispatcher;
 use JMS\Serializer\SerializerBuilder;
+use Scraper\ScraperPrestashop\Event\NameEventSubscriber;
 
 class PrestashopGetApi extends PrestashopApi
 {
@@ -168,6 +170,9 @@ class PrestashopGetApi extends PrestashopApi
 
         $dataToEncode = $this->data;
         $serializer   = SerializerBuilder::create()
+            ->configureListeners(function (EventDispatcher $dispatcher) {
+                $dispatcher->addSubscriber(new NameEventSubscriber());
+            })
             ->build()
         ;
 
