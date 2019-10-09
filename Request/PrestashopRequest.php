@@ -20,13 +20,18 @@ abstract class PrestashopRequest extends Request
      * @var string
      */
     protected $key;
+    /**
+     * @var array
+     */
+    protected $urlParameters = [];
 
     public function getParameters()
     {
-        return [
+        $array = [
             'ws_key' => $this->key,
             'io_format' => 'JSON',
         ];
+        return array_merge($array, $this->urlParameters);
     }
 
     public function getBody()
@@ -74,6 +79,25 @@ abstract class PrestashopRequest extends Request
     public function setKey(?string $key)
     {
         $this->key = $key;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getUrlParameters(): ?array
+    {
+        return $this->urlParameters;
+    }
+
+    /**
+     * @param array $urlParameters
+     *
+     * @return $this
+     */
+    public function setUrlParameters(?array $urlParameters)
+    {
+        $this->urlParameters = $urlParameters;
         return $this;
     }
 }

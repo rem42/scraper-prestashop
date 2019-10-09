@@ -19,17 +19,6 @@ class PrestashopGetRequest extends PrestashopRequest
      * @var string
      */
     protected $resource;
-    /**
-     * @var array
-     */
-    protected $urlParameters = [];
-
-    public function getParameters()
-    {
-        $parent = parent::getParameters();
-
-        return array_merge($parent, $this->urlParameters);
-    }
 
     /**
      * @return int
@@ -66,25 +55,6 @@ class PrestashopGetRequest extends PrestashopRequest
     public function setResource(?string $resource)
     {
         $this->resource = $resource;
-        return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getUrlParameters(): ?array
-    {
-        return $this->urlParameters;
-    }
-
-    /**
-     * @param array $urlParameters
-     *
-     * @return $this
-     */
-    public function setUrlParameters(?array $urlParameters)
-    {
-        $this->urlParameters = $urlParameters;
         return $this;
     }
 }
