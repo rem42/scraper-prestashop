@@ -25,8 +25,8 @@ class PrestashopProductFeatureValue
      */
     protected $custom;
     /**
-     * @var string
-     * @Serializer\Type("string")
+     * @var array
+     * @Serializer\Type("array")
      * @Serializer\SerializedName("value")
      */
     protected $value;
@@ -89,19 +89,19 @@ class PrestashopProductFeatureValue
     }
 
     /**
-     * @return string
+     * @return array
      */
-    public function getValue(): ?string
+    public function getValue(): ?array
     {
         return $this->value;
     }
 
     /**
-     * @param string $value
+     * @param array $value
      *
      * @return $this
      */
-    public function setValue(?string $value): self
+    public function setValue(?array $value): self
     {
         $this->value = $value;
         return $this;
