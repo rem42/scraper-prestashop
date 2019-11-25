@@ -160,6 +160,7 @@ class PrestashopGetApi extends PrestashopApi
         'pickup_point',
         'tntofficiel_receiver',
         'tntofficiel_order',
+        'tntofficiel_cart',
     ];
 
     public function execute()
