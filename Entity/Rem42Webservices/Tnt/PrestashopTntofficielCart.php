@@ -27,6 +27,12 @@ class PrestashopTntofficielCart
     /**
      * @var string
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("delivery_point")
+     */
+    protected $deliveryPoint;
+    /**
+     * @var string
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("customer_email")
      */
     protected $email;
@@ -55,155 +61,174 @@ class PrestashopTntofficielCart
      */
     protected $floor;
 
-	/**
-	 * @return int
-	 */
-	public function getId(): ?int
-	{
-		return $this->id;
-	}
+    /**
+     * @return int
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
-	/**
-	 * @param int $id
-	 *
-	 * @return $this
-	 */
-	public function setId(?int $id)
-	{
-		$this->id = $id;
-		return $this;
-	}
+    /**
+     * @param int $id
+     *
+     * @return $this
+     */
+    public function setId(?int $id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getIdCart(): ?int
-	{
-		return $this->idCart;
-	}
+    /**
+     * @return int
+     */
+    public function getIdCart(): ?int
+    {
+        return $this->idCart;
+    }
 
-	/**
-	 * @param int $idCart
-	 *
-	 * @return $this
-	 */
-	public function setIdCart(?int $idCart)
-	{
-		$this->idCart = $idCart;
-		return $this;
-	}
+    /**
+     * @param int $idCart
+     *
+     * @return $this
+     */
+    public function setIdCart(?int $idCart)
+    {
+        $this->idCart = $idCart;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getCarrierCode(): ?string
-	{
-		return $this->carrierCode;
-	}
+    /**
+     * @return string
+     */
+    public function getCarrierCode(): ?string
+    {
+        return $this->carrierCode;
+    }
 
-	/**
-	 * @param string $carrierCode
-	 *
-	 * @return $this
-	 */
-	public function setCarrierCode(?string $carrierCode)
-	{
-		$this->carrierCode = $carrierCode;
-		return $this;
-	}
+    /**
+     * @param string $carrierCode
+     *
+     * @return $this
+     */
+    public function setCarrierCode(?string $carrierCode)
+    {
+        $this->carrierCode = $carrierCode;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getEmail(): ?string
-	{
-		return $this->email;
-	}
+    /**
+     * @return string
+     */
+    public function getDeliveryPoint(): ?string
+    {
+        return $this->deliveryPoint;
+    }
 
-	/**
-	 * @param string $email
-	 *
-	 * @return $this
-	 */
-	public function setEmail(?string $email)
-	{
-		$this->email = $email;
-		return $this;
-	}
+    /**
+     * @param string $deliveryPoint
+     *
+     * @return $this
+     */
+    public function setDeliveryPoint(?string $deliveryPoint)
+    {
+        $this->deliveryPoint = $deliveryPoint;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getMobile(): ?string
-	{
-		return $this->mobile;
-	}
+    /**
+     * @return string
+     */
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
 
-	/**
-	 * @param string $mobile
-	 *
-	 * @return $this
-	 */
-	public function setMobile(?string $mobile)
-	{
-		$this->mobile = $mobile;
-		return $this;
-	}
+    /**
+     * @param string $email
+     *
+     * @return $this
+     */
+    public function setEmail(?string $email)
+    {
+        $this->email = $email;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getBuilding(): ?string
-	{
-		return $this->building;
-	}
+    /**
+     * @return string
+     */
+    public function getMobile(): ?string
+    {
+        return $this->mobile;
+    }
 
-	/**
-	 * @param string $building
-	 *
-	 * @return $this
-	 */
-	public function setBuilding(?string $building)
-	{
-		$this->building = $building;
-		return $this;
-	}
+    /**
+     * @param string $mobile
+     *
+     * @return $this
+     */
+    public function setMobile(?string $mobile)
+    {
+        $this->mobile = $mobile;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getAccessCode(): ?string
-	{
-		return $this->accessCode;
-	}
+    /**
+     * @return string
+     */
+    public function getBuilding(): ?string
+    {
+        return $this->building;
+    }
 
-	/**
-	 * @param string $accessCode
-	 *
-	 * @return $this
-	 */
-	public function setAccessCode(?string $accessCode)
-	{
-		$this->accessCode = $accessCode;
-		return $this;
-	}
+    /**
+     * @param string $building
+     *
+     * @return $this
+     */
+    public function setBuilding(?string $building)
+    {
+        $this->building = $building;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getFloor(): ?string
-	{
-		return $this->floor;
-	}
+    /**
+     * @return string
+     */
+    public function getAccessCode(): ?string
+    {
+        return $this->accessCode;
+    }
 
-	/**
-	 * @param string $floor
-	 *
-	 * @return $this
-	 */
-	public function setFloor(?string $floor)
-	{
-		$this->floor = $floor;
-		return $this;
-	}
+    /**
+     * @param string $accessCode
+     *
+     * @return $this
+     */
+    public function setAccessCode(?string $accessCode)
+    {
+        $this->accessCode = $accessCode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFloor(): ?string
+    {
+        return $this->floor;
+    }
+
+    /**
+     * @param string $floor
+     *
+     * @return $this
+     */
+    public function setFloor(?string $floor)
+    {
+        $this->floor = $floor;
+        return $this;
+    }
 }
