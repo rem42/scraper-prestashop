@@ -148,22 +148,27 @@ class PrestashopPutApi extends PrestashopApi
 
     public function execute()
     {
-        $dataToEncode = $this->data;
+        if($this->data === null) {
+            return null;
+        }
+
         $serializer   = SerializerBuilder::create()
             ->build()
         ;
         $url    = explode('/', $this->urlAnnotation->url);
-        $url[0] = str_replace(self::$webservices, self::$webservicesGet, $url[0]);
+        $entityToFind = $url[0];
+
+        $entityName = str_replace(self::$webservices, self::$webservicesGet, $entityToFind);
         $entry  = [
             'stock_movement' => 'stock_mvt',
         ];
 
-        if (isset($entry[$url[0]])) {
-            $dataToEncode = $this->data[$entry[$url[0]]];
+        if (isset($entry[$entityName])) {
+            $dataToEncode = $this->data[$entry[$entityName]];
         } else {
-            $dataToEncode = $this->data[$url[0]];
+            $dataToEncode = $this->data[$entityName];
         }
-        $str = ucfirst(str_replace('_', '', ucwords($url[0], '_')));
+        $str = ucfirst(str_replace('_', '', ucwords($entityName, '_')));
 
         $type = "Scraper\ScraperPrestashop\Entity\Prestashop" . ucfirst($str);
 
