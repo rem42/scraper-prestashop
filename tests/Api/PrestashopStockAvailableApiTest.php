@@ -1,0 +1,96 @@
+<?php
+
+namespace Scraper\ScraperPrestashop\Tests\Api;
+
+use PHPUnit\Framework\MockObject\Rule\InvokedAtLeastOnce;
+use Scraper\Scraper\Client;
+use Scraper\ScraperPrestashop\Entity\PrestashopStockAvailable;
+use Scraper\ScraperPrestashop\Entity\PrestashopStockAvailables;
+use Scraper\ScraperPrestashop\Request\PrestashopPutRequest;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Contracts\HttpClient\ResponseInterface;
+
+/**
+ * @internal
+ */
+class PrestashopStockAvailableApiTest extends AbstractPrestashopApiTestCase
+{
+    public function testOne(): void
+    {
+        /** @var PrestashopStockAvailable $result */
+        $result = $this->executeGetApi(
+            'stock_availables',
+            1,
+            200,
+            'stock_available.json'
+        );
+
+        $this->assertInstanceOf(PrestashopStockAvailable::class, $result);
+
+        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(42, $result->getQuantity());
+    }
+
+    public function testList(): void
+    {
+        /** @var PrestashopStockAvailables $result */
+        $result = $this->executeGetApi(
+            'stock_availables',
+            null,
+            200,
+            'stock_availables.json'
+        );
+
+        $this->assertInstanceOf(PrestashopStockAvailables::class, $result);
+        $this->assertCount(2, $result->getStockAvailables());
+        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getStockAvailables()->first());
+    }
+
+    public function testPut(): void
+    {
+        $responseInterface = $this->createMock(ResponseInterface::class);
+        $responseInterface
+            ->method('getStatusCode')->willReturn(200);
+        $responseInterface
+            ->method('getContent')->willReturn($this->loadFixture('stock_available.json'));
+
+        $httpClientInterface = $this->createMock(HttpClientInterface::class);
+        $httpClientInterface
+            ->expects(new InvokedAtLeastOnce())
+            ->method('request')
+            ->with(
+                $this->stringContains('PUT'),
+                $this->stringContains('https://website/api/stock_availables/'),
+                $this->callback(function ($options) {
+                    $this->assertXmlStringEqualsXmlFile($this->fixturePath('stock_available.xml'), $options['body']);
+                    return true;
+                })
+            )
+            ->willReturn($responseInterface)
+        ;
+
+        $client = new Client($httpClientInterface);
+
+        $request = new PrestashopPutRequest(
+            'website',
+            'key',
+            'stock_availables'
+        );
+        $stockAvailable = new PrestashopStockAvailable();
+        $stockAvailable
+            ->setId(6)
+            ->setIdProduct(6)
+            ->setIdProductAttribute(0)
+            ->setQuantity(42)
+            ->setDependsOnStock(false)
+            ->setOutOfStock(2)
+            ->setIdShop(1)
+            ->setIdShopGroup(0)
+        ;
+        $request
+            ->getPrestashopPut()
+            ->setStockAvailable($stockAvailable)
+        ;
+        $client->send($request);
+    }
+}

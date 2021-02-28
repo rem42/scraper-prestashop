@@ -1,0 +1,81 @@
+{
+  "category": {
+    "id": 1,
+    "id_parent": "0",
+    "level_depth": "0",
+    "nb_products_recursive": "380",
+    "active": "1",
+    "id_shop_default": "1",
+    "is_root_category": "0",
+    "position": "0",
+    "date_add": "2018-07-08 16:39:22",
+    "date_upd": "2018-07-08 16:39:22",
+    "name": [
+      {
+        "id": "1",
+        "value": "Racine"
+      },
+      {
+        "id": "3",
+        "value": "Root"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": "1",
+        "value": "racine"
+      },
+      {
+        "id": "3",
+        "value": "racine"
+      }
+    ],
+    "description": [
+      {
+        "id": "1",
+        "value": ""
+      },
+      {
+        "id": "3",
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": "1",
+        "value": ""
+      },
+      {
+        "id": "3",
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": "1",
+        "value": ""
+      },
+      {
+        "id": "3",
+        "value": ""
+      }
+    ],
+    "meta_keywords": [
+      {
+        "id": "1",
+        "value": ""
+      },
+      {
+        "id": "3",
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": "2"
+        }
+      ]
+    }
+  }
+}

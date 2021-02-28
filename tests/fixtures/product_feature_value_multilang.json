@@ -1,0 +1,17 @@
+{
+  "product_feature_value": {
+    "id": 1,
+    "id_feature": "1",
+    "custom": "0",
+    "value": [
+      {
+        "id": "1",
+        "value": "Polyester"
+      },
+      {
+        "id": "3",
+        "value": "Polyester"
+      }
+    ]
+  }
+}

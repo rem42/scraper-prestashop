@@ -1,0 +1,25 @@
+{
+  "country": {
+    "id": 1,
+    "id_zone": "1",
+    "id_currency": "0",
+    "call_prefix": "49",
+    "iso_code": "DE",
+    "active": "1",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": "1",
+        "value": "Allemagne"
+      },
+      {
+        "id": "3",
+        "value": "Allemagne"
+      }
+    ]
+  }
+}

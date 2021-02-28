@@ -1,0 +1,13 @@
+{
+  "order_carrier": {
+    "id": 1,
+    "id_order": "1",
+    "id_carrier": "2",
+    "id_order_invoice": "0",
+    "weight": "0.000000",
+    "shipping_cost_tax_excl": "2.000000",
+    "shipping_cost_tax_incl": "2.000000",
+    "tracking_number": "",
+    "date_add": "2020-07-11 08:50:11"
+  }
+}
