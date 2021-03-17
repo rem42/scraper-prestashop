@@ -15,15 +15,16 @@ class PrestashopPutRequest extends PrestashopRequest implements RequestBody
 {
     protected PrestashopPut $prestashopPut;
 
-    public function __construct(string $host, string $key, string $resource)
-    {
-        parent::__construct($host, $key, $resource);
-        $this->prestashopPut = new PrestashopPut();
-    }
-
     public function getPrestashopPut(): PrestashopPut
     {
         return $this->prestashopPut;
+    }
+
+    public function setPrestashopPut(PrestashopPut $prestashopPut): self
+    {
+        $this->prestashopPut = $prestashopPut;
+
+        return $this;
     }
 
     public function getBody()

@@ -1,0 +1,19 @@
+{
+  "pickup_point": {
+    "id": 1,
+    "id_order": "8",
+    "colissimo_id": "699410",
+    "company_name": "BUREAU DE POSTE LYON CONFLUENCE BP",
+    "address1": "16 QUAI ANTOINE RIBOUD",
+    "address2": "",
+    "address3": "",
+    "city": "LYON",
+    "zipcode": "69002",
+    "country": "FRANCE",
+    "iso_country": "FR",
+    "product_code": "BPR",
+    "network": "R01",
+    "date_add": "2021-03-12 19:41:20",
+    "date_upd": "2021-03-12 19:41:20"
+  }
+}

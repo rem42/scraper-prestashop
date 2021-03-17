@@ -56,7 +56,7 @@ final class PrestashopProduct
 
     private ?int $cacheDefaultAttribute = null;
 
-    private ?int $idDefaultImage = null;
+    private ?string $idDefaultImage = null;
 
     private ?int $idDefaultCombination = null;
 
@@ -507,12 +507,12 @@ final class PrestashopProduct
         return $this;
     }
 
-    public function getIdDefaultImage(): ?int
+    public function getIdDefaultImage(): ?string
     {
         return $this->idDefaultImage;
     }
 
-    public function setIdDefaultImage(?int $idDefaultImage): self
+    public function setIdDefaultImage(?string $idDefaultImage): self
     {
         $this->idDefaultImage = $idDefaultImage;
 

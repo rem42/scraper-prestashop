@@ -6,7 +6,7 @@ final class PrestashopOrderHistory
 {
     private ?int $id = null;
 
-    private ?int $idEmployee = null;
+    private ?string $idEmployee = null;
 
     private ?int $idOrderState = null;
 
@@ -26,12 +26,12 @@ final class PrestashopOrderHistory
         return $this;
     }
 
-    public function getIdEmployee(): ?int
+    public function getIdEmployee(): ?string
     {
         return $this->idEmployee;
     }
 
-    public function setIdEmployee(?int $idEmployee): self
+    public function setIdEmployee(?string $idEmployee): self
     {
         $this->idEmployee = $idEmployee;
 

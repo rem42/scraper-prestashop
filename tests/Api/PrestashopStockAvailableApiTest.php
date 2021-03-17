@@ -4,6 +4,7 @@ namespace Scraper\ScraperPrestashop\Tests\Api;
 
 use PHPUnit\Framework\MockObject\Rule\InvokedAtLeastOnce;
 use Scraper\Scraper\Client;
+use Scraper\ScraperPrestashop\Entity\PrestashopPut;
 use Scraper\ScraperPrestashop\Entity\PrestashopStockAvailable;
 use Scraper\ScraperPrestashop\Entity\PrestashopStockAvailables;
 use Scraper\ScraperPrestashop\Request\PrestashopPutRequest;
@@ -87,9 +88,10 @@ class PrestashopStockAvailableApiTest extends AbstractPrestashopApiTestCase
             ->setIdShop(1)
             ->setIdShopGroup(0)
         ;
+        $prestashopPut = new PrestashopPut();
+        $prestashopPut->setStockAvailable($stockAvailable);
         $request
-            ->getPrestashopPut()
-            ->setStockAvailable($stockAvailable)
+            ->setPrestashopPut($prestashopPut)
         ;
         $client->send($request);
     }

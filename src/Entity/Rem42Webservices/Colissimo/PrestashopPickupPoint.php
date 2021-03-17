@@ -4,15 +4,15 @@ namespace Scraper\ScraperPrestashop\Entity\Rem42Webservices\Colissimo;
 
 final class PrestashopPickupPoint
 {
+    private ?int $id = null;
+
+    private ?int $idOrder = null;
+
     private ?string $address1;
 
     private ?string $address2;
 
     private ?string $address3;
-
-    private ?int $id = null;
-
-    private ?int $idOrder = null;
 
     private ?string $colissimoId = null;
 
@@ -33,6 +33,30 @@ final class PrestashopPickupPoint
     private ?\DateTimeInterface $dateAdd = null;
 
     private ?\DateTimeInterface $dateUpd = null;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function setId(?int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    public function getIdOrder(): ?int
+    {
+        return $this->idOrder;
+    }
+
+    public function setIdOrder(?int $idOrder): self
+    {
+        $this->idOrder = $idOrder;
+
+        return $this;
+    }
 
     public function getAddress1(): ?string
     {
@@ -66,30 +90,6 @@ final class PrestashopPickupPoint
     public function setAddress3(?string $address3): self
     {
         $this->address3 = $address3;
-
-        return $this;
-    }
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function setId(?int $id): self
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
-    public function getIdOrder(): ?int
-    {
-        return $this->idOrder;
-    }
-
-    public function setIdOrder(?int $idOrder): self
-    {
-        $this->idOrder = $idOrder;
 
         return $this;
     }

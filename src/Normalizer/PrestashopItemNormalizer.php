@@ -8,6 +8,8 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 class PrestashopItemNormalizer implements DenormalizerInterface
 {
     /**
+     * @param array<string, string> $context
+     *
      * @return PrestashopItem|PrestashopItem[]
      */
     public function denormalize($data, string $type, string $format = null, array $context = [])

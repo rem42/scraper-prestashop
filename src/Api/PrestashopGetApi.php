@@ -18,6 +18,10 @@ class PrestashopGetApi extends PrestashopApi
             throw new PrestashopUnexpectedException('cannot handle ' . \get_class($this->request) . ' in get env');
         }
 
+        if (ResourceMapping::isFile($this->request)) {
+            return $content;
+        }
+
         $className = ResourceMapping::find($this->request);
 
         if ($this->request->getId()) {

@@ -69,7 +69,7 @@ final class PrestashopCarrier
         return $this;
     }
 
-    public function getDeleted(): ?bool
+    public function isDeleted(): ?bool
     {
         return $this->deleted;
     }
@@ -129,7 +129,7 @@ final class PrestashopCarrier
         return $this;
     }
 
-    public function getActive(): ?bool
+    public function isActive(): ?bool
     {
         return $this->active;
     }

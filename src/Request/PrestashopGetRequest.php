@@ -6,7 +6,7 @@ use Scraper\Scraper\Annotation\Scraper;
 use Scraper\Scraper\Request\RequestQuery;
 
 /**
- * @Scraper(path="{resource}/{id}", method="GET")
+ * @Scraper(method="GET")
  */
 class PrestashopGetRequest extends PrestashopRequest implements RequestQuery
 {
@@ -57,8 +57,7 @@ class PrestashopGetRequest extends PrestashopRequest implements RequestQuery
 
     public function addFilter(string $parameter, string $value): self
     {
-        $key                = 'filter[' . $parameter . ']';
-        $this->filter[$key] = $value;
+        $this->filter['filter[' . $parameter . ']'] = $value;
 
         return $this;
     }

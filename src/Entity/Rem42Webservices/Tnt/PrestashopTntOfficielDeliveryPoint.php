@@ -2,15 +2,11 @@
 
 namespace Scraper\ScraperPrestashop\Entity\Rem42Webservices\Tnt;
 
-use Doctrine\Common\Collections\Collection;
-
 final class PrestashopTntOfficielDeliveryPoint
 {
-    private ?string $address1;
+    private ?string $address1 = null;
 
-    private ?string $address2;
-
-    private Collection $schedule;
+    private ?string $address2 = null;
 
     private ?string $xett = null;
 
@@ -54,18 +50,6 @@ final class PrestashopTntOfficielDeliveryPoint
     public function setAddress2(?string $address2): self
     {
         $this->address2 = $address2;
-
-        return $this;
-    }
-
-    public function getSchedule(): Collection
-    {
-        return $this->schedule;
-    }
-
-    public function setSchedule(Collection $schedule): self
-    {
-        $this->schedule = $schedule;
 
         return $this;
     }

@@ -49,6 +49,11 @@ use Scraper\ScraperPrestashop\Entity\PrestashopState;
 use Scraper\ScraperPrestashop\Entity\PrestashopStates;
 use Scraper\ScraperPrestashop\Entity\PrestashopStockAvailable;
 use Scraper\ScraperPrestashop\Entity\PrestashopStockAvailables;
+use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Colissimo\PrestashopPickupPoint;
+use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Colissimo\PrestashopPickupPoints;
+use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Tnt\PrestashopTntofficielCart;
+use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Tnt\PrestashopTntofficielOrder;
+use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Tnt\PrestashopTntofficielReceiver;
 use Scraper\ScraperPrestashop\Exception\PrestashopResouceMappingNotFoundException;
 use Scraper\ScraperPrestashop\Request\PrestashopPostRequest;
 use Scraper\ScraperPrestashop\Request\PrestashopPutRequest;
@@ -402,21 +407,29 @@ class ResourceMapping
             'one'      => '',
             'singular' => 'zone',
         ],
-    ];
-
-    protected static $rem42Webservices = [
-        'delivery_infos',
-        'pickup_points',
-        'tntofficiel_receivers',
-        'tntofficiel_orders',
-    ];
-
-    protected static $rem42WebservicesGet = [
-        'delivery_info',
-        'pickup_point',
-        'tntofficiel_receiver',
-        'tntofficiel_order',
-        'tntofficiel_cart',
+        'rem42_webservices/colissimo/pickup_points' => [
+            'list'     => PrestashopPickupPoints::class,
+            'one'      => PrestashopPickupPoint::class,
+            'singular' => 'pickup_point',
+        ],
+        'rem42_webservices/tnt/tntofficiel_receiver' => [
+            'list'     => '',
+            'one'      => PrestashopTntofficielReceiver::class,
+            'singular' => 'tntofficiel_receiver',
+        ],
+        'rem42_webservices/tnt/tntofficiel_order' => [
+            'list'     => '',
+            'one'      => PrestashopTntofficielOrder::class,
+            'singular' => 'tntofficiel_order',
+        ],
+        'rem42_webservices/tnt/tntofficiel_cart' => [
+            'list'     => '',
+            'one'      => PrestashopTntofficielCart::class,
+            'singular' => 'tntofficiel_cart',
+        ],
+        'rem42_webservices/orders/invoices' => [
+            'isFile' => true,
+        ],
     ];
 
     public static function find(PrestashopRequest $prestashopRequest): string
@@ -427,9 +440,18 @@ class ResourceMapping
 
         $resource = self::resourcesMapping[$prestashopRequest->getResource()];
 
-        if ($prestashopRequest->getId() || $prestashopRequest instanceof PrestashopPostRequest
-            || $prestashopRequest instanceof PrestashopPutRequest) {
+        if ($prestashopRequest->getId()
+            || $prestashopRequest instanceof PrestashopPostRequest
+            || $prestashopRequest instanceof PrestashopPutRequest
+        ) {
+            if (!isset($resource['one'])) {
+                throw new PrestashopResouceMappingNotFoundException('cannot found one for this resource: ' . $prestashopRequest->getResource());
+            }
             return $resource['one'];
+        }
+
+        if (!isset($resource['list'])) {
+            throw new PrestashopResouceMappingNotFoundException('cannot found list for this resource: ' . $prestashopRequest->getResource());
         }
         return $resource['list'];
     }
@@ -442,6 +464,21 @@ class ResourceMapping
 
         $resource = self::resourcesMapping[$prestashopGetRequest->getResource()];
 
+        if (!isset($resource['singular'])) {
+            throw new PrestashopResouceMappingNotFoundException('cannot found singular for this resource: ' . $prestashopGetRequest->getResource());
+        }
+
         return $resource['singular'];
+    }
+
+    public static function isFile(PrestashopRequest $prestashopGetRequest): bool
+    {
+        if (!isset(self::resourcesMapping[$prestashopGetRequest->getResource()])) {
+            throw new PrestashopResouceMappingNotFoundException('cannot found this resource:' . $prestashopGetRequest->getResource());
+        }
+
+        $resource = self::resourcesMapping[$prestashopGetRequest->getResource()];
+
+        return $resource['isFile'] ?? false;
     }
 }

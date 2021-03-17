@@ -8,15 +8,17 @@ final class PrestashopTntofficielReceiver
 
     private ?int $idAddress = null;
 
-    private ?string $email = null;
+    private ?string $receiverEmail = null;
 
-    private ?string $mobile = null;
+    private ?string $receiverMobile = null;
 
-    private ?string $building = null;
+    private ?string $receiverBuilding = null;
 
-    private ?string $accessCode = null;
+    private ?string $receiverAccesscode = null;
 
-    private ?string $floor = null;
+    private ?string $receiverFloor = null;
+
+    private ?string $receiverInstructions = null;
 
     public function getId(): ?int
     {
@@ -42,62 +44,74 @@ final class PrestashopTntofficielReceiver
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getReceiverEmail(): ?string
     {
-        return $this->email;
+        return $this->receiverEmail;
     }
 
-    public function setEmail(?string $email): self
+    public function setReceiverEmail(?string $receiverEmail): self
     {
-        $this->email = $email;
+        $this->receiverEmail = $receiverEmail;
 
         return $this;
     }
 
-    public function getMobile(): ?string
+    public function getReceiverMobile(): ?string
     {
-        return $this->mobile;
+        return $this->receiverMobile;
     }
 
-    public function setMobile(?string $mobile): self
+    public function setReceiverMobile(?string $receiverMobile): self
     {
-        $this->mobile = $mobile;
+        $this->receiverMobile = $receiverMobile;
 
         return $this;
     }
 
-    public function getBuilding(): ?string
+    public function getReceiverBuilding(): ?string
     {
-        return $this->building;
+        return $this->receiverBuilding;
     }
 
-    public function setBuilding(?string $building): self
+    public function setReceiverBuilding(?string $receiverBuilding): self
     {
-        $this->building = $building;
+        $this->receiverBuilding = $receiverBuilding;
 
         return $this;
     }
 
-    public function getAccessCode(): ?string
+    public function getReceiverAccesscode(): ?string
     {
-        return $this->accessCode;
+        return $this->receiverAccesscode;
     }
 
-    public function setAccessCode(?string $accessCode): self
+    public function setReceiverAccesscode(?string $receiverAccesscode): self
     {
-        $this->accessCode = $accessCode;
+        $this->receiverAccesscode = $receiverAccesscode;
 
         return $this;
     }
 
-    public function getFloor(): ?string
+    public function getReceiverFloor(): ?string
     {
-        return $this->floor;
+        return $this->receiverFloor;
     }
 
-    public function setFloor(?string $floor): self
+    public function setReceiverFloor(?string $receiverFloor): self
     {
-        $this->floor = $floor;
+        $this->receiverFloor = $receiverFloor;
+
+        return $this;
+    }
+
+    public function getReceiverInstructions(): ?string
+    {
+        return $this->receiverInstructions;
+    }
+
+    public function setReceiverInstructions(?string $receiverInstructions): self
+    {
+        $this->receiverInstructions = $receiverInstructions;
 
         return $this;
     }

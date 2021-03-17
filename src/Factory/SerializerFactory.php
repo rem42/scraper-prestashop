@@ -3,6 +3,7 @@
 namespace Scraper\ScraperPrestashop\Factory;
 
 use Doctrine\Common\Annotations\AnnotationReader;
+use Scraper\ScraperPrestashop\Normalizer\PrestashopDeliveryPointNormalizer;
 use Scraper\ScraperPrestashop\Normalizer\PrestashopItemNormalizer;
 use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -28,6 +29,7 @@ class SerializerFactory
         $encoders    = ['json' => new JsonEncoder(), 'xml' => new XmlEncoder()];
         $normalizers = [
             new PrestashopItemNormalizer(),
+            new PrestashopDeliveryPointNormalizer(new ObjectNormalizer()),
             new DateTimeNormalizer([
                 DateTimeNormalizer::FORMAT_KEY => 'Y-m-d H:i:s',
             ]),

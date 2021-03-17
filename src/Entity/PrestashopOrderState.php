@@ -106,7 +106,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getUnremovable(): ?bool
+    public function isUnremovable(): ?bool
     {
         return $this->unremovable;
     }
@@ -121,7 +121,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getDelivery(): ?bool
+    public function isDelivery(): ?bool
     {
         return $this->delivery;
     }
@@ -136,7 +136,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getHidden(): ?bool
+    public function isHidden(): ?bool
     {
         return $this->hidden;
     }
@@ -151,7 +151,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getSendEmail(): ?bool
+    public function isSendEmail(): ?bool
     {
         return $this->sendEmail;
     }
@@ -181,7 +181,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getInvoice(): ?bool
+    public function isInvoice(): ?bool
     {
         return $this->invoice;
     }
@@ -211,7 +211,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getLogable(): ?bool
+    public function isLogable(): ?bool
     {
         return $this->logable;
     }
@@ -226,7 +226,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getShipped(): ?bool
+    public function isShipped(): ?bool
     {
         return $this->shipped;
     }
@@ -241,7 +241,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getPaid(): ?bool
+    public function isPaid(): ?bool
     {
         return $this->paid;
     }
@@ -256,7 +256,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getPdfDelivery(): ?bool
+    public function isPdfDelivery(): ?bool
     {
         return $this->pdfDelivery;
     }
@@ -271,7 +271,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getPdfInvoice(): ?bool
+    public function isPdfInvoice(): ?bool
     {
         return $this->pdfInvoice;
     }
@@ -286,7 +286,7 @@ final class PrestashopOrderState
         return $this;
     }
 
-    public function getDeleted(): ?bool
+    public function isDeleted(): ?bool
     {
         return $this->deleted;
     }

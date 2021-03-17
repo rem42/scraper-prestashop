@@ -11,19 +11,20 @@ use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 /**
  * @Scraper(method="POST")
  */
-class PrestashopPostRequest extends PrestashopRequest implements RequestBody
+final class PrestashopPostRequest extends PrestashopRequest implements RequestBody
 {
     protected PrestashopPost $prestashopPost;
-
-    public function __construct(string $host, string $key, string $resource)
-    {
-        parent::__construct($host, $key, $resource);
-        $this->prestashopPost = new PrestashopPost();
-    }
 
     public function getPrestashopPost(): PrestashopPost
     {
         return $this->prestashopPost;
+    }
+
+    public function setPrestashopPost(PrestashopPost $prestashopPost): self
+    {
+        $this->prestashopPost = $prestashopPost;
+
+        return $this;
     }
 
     public function getBody()

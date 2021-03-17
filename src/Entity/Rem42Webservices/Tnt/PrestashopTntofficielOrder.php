@@ -8,7 +8,7 @@ final class PrestashopTntofficielOrder
 
     private ?int $idOrder = null;
 
-    private ?string $deliveryPoint = null;
+    private ?PrestashopTntOfficielDeliveryPoint $deliveryPoint = null;
 
     private ?bool $isShipped = null;
 
@@ -44,12 +44,12 @@ final class PrestashopTntofficielOrder
         return $this;
     }
 
-    public function getDeliveryPoint(): ?string
+    public function getDeliveryPoint(): ?PrestashopTntOfficielDeliveryPoint
     {
         return $this->deliveryPoint;
     }
 
-    public function setDeliveryPoint(?string $deliveryPoint): self
+    public function setDeliveryPoint(?PrestashopTntOfficielDeliveryPoint $deliveryPoint): self
     {
         $this->deliveryPoint = $deliveryPoint;
 

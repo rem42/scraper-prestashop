@@ -443,7 +443,7 @@ final class PrestashopOrder
         return $this;
     }
 
-    public function getRecyclable(): ?bool
+    public function isRecyclable(): ?bool
     {
         return $this->recyclable;
     }
@@ -458,7 +458,7 @@ final class PrestashopOrder
         return $this;
     }
 
-    public function getGift(): ?bool
+    public function isGift(): ?bool
     {
         return $this->gift;
     }
