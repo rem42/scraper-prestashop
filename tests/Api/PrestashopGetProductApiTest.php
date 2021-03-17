@@ -8,6 +8,7 @@ use Scraper\ScraperPrestashop\Entity\PrestashopCombination;
 use Scraper\ScraperPrestashop\Entity\PrestashopImage;
 use Scraper\ScraperPrestashop\Entity\PrestashopItem;
 use Scraper\ScraperPrestashop\Entity\PrestashopProduct;
+use Scraper\ScraperPrestashop\Entity\PrestashopProductBundle;
 use Scraper\ScraperPrestashop\Entity\PrestashopProductFeature;
 use Scraper\ScraperPrestashop\Entity\PrestashopProductOptionValue;
 use Scraper\ScraperPrestashop\Entity\PrestashopProducts;
@@ -84,6 +85,9 @@ class PrestashopGetProductApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertCount(9, $result->getAssociations()->getStockAvailables());
         $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getAssociations()->getStockAvailables()->first());
+
+        $this->assertCount(2, $result->getAssociations()->getProductBundle());
+        $this->assertInstanceOf(PrestashopProductBundle::class, $result->getAssociations()->getProductBundle()->first());
     }
 
     public function testMultilang(): void
@@ -152,6 +156,9 @@ class PrestashopGetProductApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertCount(9, $result->getAssociations()->getStockAvailables());
         $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getAssociations()->getStockAvailables()->first());
+
+        $this->assertCount(2, $result->getAssociations()->getProductBundle());
+        $this->assertInstanceOf(PrestashopProductBundle::class, $result->getAssociations()->getProductBundle()->first());
     }
 
     public function testList(): void

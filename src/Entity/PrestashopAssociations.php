@@ -34,6 +34,9 @@ final class PrestashopAssociations
     /** @var Collection<int, PrestashopProductOptionValue> */
     private Collection $productOptionValues;
 
+    /** @var Collection<int, PrestashopProductBundle> */
+    private Collection $productBundle;
+
     public function __construct()
     {
         $this->cartRows            = new ArrayCollection();
@@ -45,6 +48,7 @@ final class PrestashopAssociations
         $this->stockAvailables     = new ArrayCollection();
         $this->combinations        = new ArrayCollection();
         $this->productOptionValues = new ArrayCollection();
+        $this->productBundle       = new ArrayCollection();
     }
 
     /**
@@ -117,6 +121,14 @@ final class PrestashopAssociations
     public function getProductOptionValues(): Collection
     {
         return $this->productOptionValues;
+    }
+
+    /**
+     * @return Collection<int, PrestashopProductBundle>
+     */
+    public function getProductBundle(): Collection
+    {
+        return $this->productBundle;
     }
 
     public function addCartRow(PrestashopCartRow $cartRow): self
@@ -241,6 +253,20 @@ final class PrestashopAssociations
     public function removeProductOptionValue(PrestashopProductOptionValue $productOptionValue): self
     {
         $this->productOptionValues->removeElement($productOptionValue);
+
+        return $this;
+    }
+
+    public function addProductBundle(PrestashopProductBundle $productBundle): self
+    {
+        $this->productBundle->add($productBundle);
+
+        return $this;
+    }
+
+    public function removeProductBundle(PrestashopProductBundle $productBundle): self
+    {
+        $this->productBundle->removeElement($productBundle);
 
         return $this;
     }

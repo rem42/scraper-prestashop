@@ -281,6 +281,18 @@
           "id": "27",
           "id_product_attribute": "8"
         }
+      ],
+      "product_bundle": [
+        {
+          "id": "5",
+          "id_product_attribute": "19",
+          "quantity": "5"
+        },
+        {
+          "id": "7",
+          "id_product_attribute": "0",
+          "quantity": "5"
+        }
       ]
     }
   }
