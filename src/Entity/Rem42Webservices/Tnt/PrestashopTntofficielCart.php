@@ -12,15 +12,15 @@ final class PrestashopTntofficielCart
 
     private ?string $deliveryPoint = null;
 
-    private ?string $email = null;
+    private ?string $customerEmail = null;
 
-    private ?string $mobile = null;
+    private ?string $customerMobile = null;
 
-    private ?string $building = null;
+    private ?string $addressBuilding = null;
 
-    private ?string $accessCode = null;
+    private ?string $addressAccesscode = null;
 
-    private ?string $floor = null;
+    private ?string $addressFloor = null;
 
     public function getId(): ?int
     {
@@ -70,62 +70,62 @@ final class PrestashopTntofficielCart
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getCustomerEmail(): ?string
     {
-        return $this->email;
+        return $this->customerEmail;
     }
 
-    public function setEmail(?string $email): self
+    public function setCustomerEmail(?string $customerEmail): self
     {
-        $this->email = $email;
+        $this->customerEmail = $customerEmail;
 
         return $this;
     }
 
-    public function getMobile(): ?string
+    public function getCustomerMobile(): ?string
     {
-        return $this->mobile;
+        return $this->customerMobile;
     }
 
-    public function setMobile(?string $mobile): self
+    public function setCustomerMobile(?string $customerMobile): self
     {
-        $this->mobile = $mobile;
+        $this->customerMobile = $customerMobile;
 
         return $this;
     }
 
-    public function getBuilding(): ?string
+    public function getAddressBuilding(): ?string
     {
-        return $this->building;
+        return $this->addressBuilding;
     }
 
-    public function setBuilding(?string $building): self
+    public function setAddressBuilding(?string $addressBuilding): self
     {
-        $this->building = $building;
+        $this->addressBuilding = $addressBuilding;
 
         return $this;
     }
 
-    public function getAccessCode(): ?string
+    public function getAddressAccesscode(): ?string
     {
-        return $this->accessCode;
+        return $this->addressAccesscode;
     }
 
-    public function setAccessCode(?string $accessCode): self
+    public function setAddressAccesscode(?string $addressAccesscode): self
     {
-        $this->accessCode = $accessCode;
+        $this->addressAccesscode = $addressAccesscode;
 
         return $this;
     }
 
-    public function getFloor(): ?string
+    public function getAddressFloor(): ?string
     {
-        return $this->floor;
+        return $this->addressFloor;
     }
 
-    public function setFloor(?string $floor): self
+    public function setAddressFloor(?string $addressFloor): self
     {
-        $this->floor = $floor;
+        $this->addressFloor = $addressFloor;
 
         return $this;
     }
