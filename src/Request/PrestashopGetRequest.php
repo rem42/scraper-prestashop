@@ -22,12 +22,13 @@ class PrestashopGetRequest extends PrestashopRequest implements RequestQuery
 
     public function getQuery(): array
     {
-        return [
-            ...parent::getQuery(),
-            ...$this->getLimit(),
-            ...$this->getDisplay(),
-            ...$this->getFilter(),
-        ];
+        return array_merge(
+            [],
+            parent::getQuery(),
+            $this->getLimit(),
+            $this->getDisplay(),
+            $this->getFilter(),
+        );
     }
 
     public function enableDisplayFull(): self
