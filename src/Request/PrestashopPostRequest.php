@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 /**
  * @Scraper(method="POST")
  */
-final class PrestashopPostRequest extends PrestashopRequest implements RequestBody
+class PrestashopPostRequest extends PrestashopRequest implements RequestBody
 {
     protected PrestashopPost $prestashopPost;
 

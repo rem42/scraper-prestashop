@@ -5,12 +5,13 @@ namespace Scraper\ScraperPrestashop\Request;
 use Scraper\Scraper\Annotation\Scraper;
 use Scraper\Scraper\Request\RequestAuthBasic;
 use Scraper\Scraper\Request\RequestHeaders;
+use Scraper\Scraper\Request\RequestQuery;
 use Scraper\Scraper\Request\ScraperRequest;
 
 /**
  * @Scraper(scheme="HTTPS", host="{host}", path="/api/{resource}/{id}")
  */
-abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBasic, RequestHeaders
+abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBasic, RequestHeaders, RequestQuery
 {
     protected ?int $id = null;
 
@@ -18,6 +19,7 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
     private string $host;
 
     private string $key;
+    private bool $useKeyInQuery = false;
 
     public function __construct(string $host, string $key, string $resource)
     {
@@ -41,6 +43,16 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
         return $this->key . ':';
     }
 
+    public function getQuery(): array
+    {
+        if (true === $this->useKeyInQuery) {
+            return [
+                'ws_key' => $this->key,
+            ];
+        }
+        return [];
+    }
+
     public function getHeaders(): array
     {
         return [
@@ -62,6 +74,13 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
     public function setId(?int $id): self
     {
         $this->id = $id;
+
+        return $this;
+    }
+
+    public function useKeyInQuery(): self
+    {
+        $this->useKeyInQuery = true;
 
         return $this;
     }
