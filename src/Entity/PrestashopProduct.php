@@ -62,7 +62,7 @@ final class PrestashopProduct
 
     private ?int $idTaxRulesGroup = null;
 
-    private ?int $positionInCategory = null;
+    private ?string $positionInCategory = null;
 
     private ?string $manufacturerName = null;
 
@@ -543,12 +543,12 @@ final class PrestashopProduct
         return $this;
     }
 
-    public function getPositionInCategory(): ?int
+    public function getPositionInCategory(): ?string
     {
         return $this->positionInCategory;
     }
 
-    public function setPositionInCategory(?int $positionInCategory): self
+    public function setPositionInCategory(?string $positionInCategory): self
     {
         $this->positionInCategory = $positionInCategory;
 
