@@ -8,11 +8,11 @@ final class PrestashopPickupPoint
 
     private ?int $idOrder = null;
 
-    private ?string $address1;
+    private ?string $address1 = null;
 
-    private ?string $address2;
+    private ?string $address2 = null;
 
-    private ?string $address3;
+    private ?string $address3 = null;
 
     private ?string $colissimoId = null;
 
