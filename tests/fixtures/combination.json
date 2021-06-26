@@ -1,0 +1,38 @@
+{
+  "combination": {
+    "id": 1,
+    "id_product": "1",
+    "location": "",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "quantity": "300",
+    "reference": "demo_1",
+    "supplier_reference": "",
+    "wholesale_price": "0.000000",
+    "price": "0.000000",
+    "ecotax": "0.000000",
+    "weight": "0.000000",
+    "unit_price_impact": "0.000000",
+    "minimal_quantity": "1",
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "default_on": "1",
+    "available_date": "0000-00-00",
+    "associations": {
+      "product_option_values": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "8"
+        }
+      ],
+      "images": [
+        {
+          "id": "2"
+        }
+      ]
+    }
+  }
+}

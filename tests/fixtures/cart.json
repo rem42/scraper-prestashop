@@ -1,0 +1,41 @@
+{
+  "cart": {
+    "id": 1,
+    "id_address_delivery": "5",
+    "id_address_invoice": "5",
+    "id_currency": "1",
+    "id_customer": "2",
+    "id_guest": "1",
+    "id_lang": "1",
+    "id_shop_group": "1",
+    "id_shop": "1",
+    "id_carrier": "2",
+    "recyclable": "0",
+    "gift": "0",
+    "gift_message": "",
+    "mobile_theme": "0",
+    "delivery_option": "{\"3\":\"2,\"}",
+    "secure_key": "b44a6d9efd7a0076a0fbce6b15eaf3b1",
+    "allow_seperated_package": "0",
+    "date_add": "2020-07-11 08:50:09",
+    "date_upd": "2020-07-11 08:50:09",
+    "associations": {
+      "cart_rows": [
+        {
+          "id_product": "1",
+          "id_product_attribute": "1",
+          "id_address_delivery": "3",
+          "id_customization": "0",
+          "quantity": "1"
+        },
+        {
+          "id_product": "2",
+          "id_product_attribute": "9",
+          "id_address_delivery": "3",
+          "id_customization": "0",
+          "quantity": "1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "product_option": {
+    "id": 1,
+    "is_color_group": "0",
+    "group_type": "select",
+    "position": "0",
+    "name": [
+      {
+        "id": "1",
+        "value": "Taille"
+      },
+      {
+        "id": "3",
+        "value": "Size"
+      }
+    ],
+    "public_name": [
+      {
+        "id": "1",
+        "value": "Taille"
+      },
+      {
+        "id": "3",
+        "value": "Size"
+      }
+    ],
+    "associations": {
+      "product_option_values": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        },
+        {
+          "id": "3"
+        },
+        {
+          "id": "4"
+        }
+      ]
+    }
+  }
+}

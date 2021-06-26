@@ -1,0 +1,23 @@
+{
+  "order_invoice": {
+    "id": 1,
+    "id_order": "6",
+    "number": "1",
+    "delivery_number": "1",
+    "delivery_date": "2020-07-11 08:59:57",
+    "total_discount_tax_excl": "0.000000",
+    "total_discount_tax_incl": "0.000000",
+    "total_paid_tax_excl": "29.120000",
+    "total_paid_tax_incl": "32.940000",
+    "total_products": "19.120000",
+    "total_products_wt": "22.940000",
+    "total_shipping_tax_excl": "10.000000",
+    "total_shipping_tax_incl": "10.000000",
+    "shipping_tax_computation_method": "0",
+    "total_wrapping_tax_excl": "0.000000",
+    "total_wrapping_tax_incl": "0.000000",
+    "shop_address": "Presta Test",
+    "note": "",
+    "date_add": "2020-07-11 08:58:48"
+  }
+}

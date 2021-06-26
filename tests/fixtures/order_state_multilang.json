@@ -1,0 +1,38 @@
+{
+  "order_state": {
+    "id": 1,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "ps_checkpayment",
+    "invoice": "0",
+    "color": "#4169E1",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": "1",
+        "value": "En attente du paiement par chèque"
+      },
+      {
+        "id": "3",
+        "value": "Awaiting check payment"
+      }
+    ],
+    "template": [
+      {
+        "id": "1",
+        "value": "cheque"
+      },
+      {
+        "id": "3",
+        "value": "cheque"
+      }
+    ]
+  }
+}
