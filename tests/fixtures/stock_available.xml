@@ -8,6 +8,6 @@
         <id_shop_group>0</id_shop_group>
         <quantity>42</quantity>
         <depends_on_stock>0</depends_on_stock>
-        <out_of_stock>1</out_of_stock>
+        <out_of_stock>2</out_of_stock>
     </stock_available>
 </response>
