@@ -18,7 +18,7 @@ final class PrestashopStockAvailable
 
     private ?int $dependsOnStock = null;
 
-    private ?bool $outOfStock = null;
+    private ?int $outOfStock = null;
 
     public function getId(): ?int
     {
@@ -104,12 +104,12 @@ final class PrestashopStockAvailable
         return $this;
     }
 
-    public function getOutOfStock(): ?bool
+    public function getOutOfStock(): ?int
     {
         return $this->outOfStock;
     }
 
-    public function setOutOfStock(?bool $outOfStock): self
+    public function setOutOfStock(?int $outOfStock): self
     {
         $this->outOfStock = $outOfStock;
 
