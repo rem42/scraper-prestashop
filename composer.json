@@ -14,7 +14,7 @@
     "rem42/scraper": "^2.0"
   },
   "require-dev": {
-    "rem42/php-cs-fixer-config": "^1.3",
+    "rem42/php-cs-fixer-config": "^2.0",
     "phpstan/phpstan": "^0.12",
     "phpunit/phpunit": "^9.0",
     "php-coveralls/php-coveralls": "^2.0"
