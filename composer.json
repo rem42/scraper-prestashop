@@ -11,7 +11,8 @@
     "php": "^7.4|^8.0",
     "doctrine/collections": "^1.6",
     "symfony/serializer-pack": "^1.0",
-    "rem42/scraper": "^2.0"
+    "rem42/scraper": "^2.0",
+    "ext-json": "*"
   },
   "require-dev": {
     "rem42/php-cs-fixer-config": "^3.1",
