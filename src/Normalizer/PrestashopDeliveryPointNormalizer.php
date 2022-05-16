@@ -27,7 +27,7 @@ class PrestashopDeliveryPointNormalizer implements ContextAwareDenormalizerInter
     /**
      * @param array<string, string> $context
      */
-    public function supportsDenormalization($data, string $type, string $format = null, array $context = [])
+    public function supportsDenormalization($data, string $type, string $format = null, array $context = []): bool
     {
         return PrestashopTntOfficielDeliveryPoint::class === $type;
     }
