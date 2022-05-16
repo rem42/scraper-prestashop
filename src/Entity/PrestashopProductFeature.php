@@ -2,6 +2,7 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 final class PrestashopProductFeature
@@ -14,6 +15,11 @@ final class PrestashopProductFeature
     private ?int $idFeatureValue = null;
 
     private ?string $position = null;
+
+    public function __construct()
+    {
+        $this->name = new ArrayCollection();
+    }
 
     /**
      * @return Collection<int, PrestashopItem>

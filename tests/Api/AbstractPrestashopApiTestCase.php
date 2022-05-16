@@ -36,7 +36,7 @@ abstract class AbstractPrestashopApiTestCase extends TestCase
     }
 
     /**
-     * @param null|mixed $id
+     * @param mixed|null $id
      *
      * @return array<object>|bool|object
      */
