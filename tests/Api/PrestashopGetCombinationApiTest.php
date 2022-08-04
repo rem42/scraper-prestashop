@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -25,17 +25,17 @@ class PrestashopGetCombinationApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCombination::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(1, $result->getIdProduct());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(1, $result->idProduct);
 
-        $this->assertInstanceOf(\DateTimeInterface::class, $result->getAvailableDate());
-        $this->assertInstanceOf(PrestashopAssociations::class, $result->getAssociations());
+        $this->assertInstanceOf(\DateTimeInterface::class, $result->availableDate);
+        $this->assertInstanceOf(PrestashopAssociations::class, $result->associations);
 
-        $this->assertCount(2, $result->getAssociations()->getProductOptionValues());
-        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->getAssociations()->getProductOptionValues()->first());
+        $this->assertCount(2, $result->associations->productOptionValues);
+        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->associations->productOptionValues[0]);
 
-        $this->assertCount(1, $result->getAssociations()->getImages());
-        $this->assertInstanceOf(PrestashopImage::class, $result->getAssociations()->getImages()->first());
+        $this->assertCount(1, $result->associations->images);
+        $this->assertInstanceOf(PrestashopImage::class, $result->associations->images[0]);
     }
 
     public function testList(): void
@@ -49,7 +49,7 @@ class PrestashopGetCombinationApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopCombinations::class, $result);
-        $this->assertCount(2, $result->getCombinations());
-        $this->assertInstanceOf(PrestashopCombination::class, $result->getCombinations()->first());
+        $this->assertCount(2, $result->combinations);
+        $this->assertInstanceOf(PrestashopCombination::class, $result->combinations[0]);
     }
 }

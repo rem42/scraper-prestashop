@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,8 +23,8 @@ class PrestashopColissimoPickUpPointApiTest extends AbstractPrestashopApiTestCas
 
         $this->assertInstanceOf(PrestashopPickupPoint::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(8, $result->getIdOrder());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(8, $result->idOrder);
     }
 
     public function testList(): void
@@ -38,7 +38,7 @@ class PrestashopColissimoPickUpPointApiTest extends AbstractPrestashopApiTestCas
         );
 
         $this->assertInstanceOf(PrestashopStockAvailables::class, $result);
-        $this->assertCount(2, $result->getStockAvailables());
-        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getStockAvailables()->first());
+        $this->assertCount(2, $result->stockAvailables);
+        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->stockAvailables[0]);
     }
 }

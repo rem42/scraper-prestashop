@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,13 +23,13 @@ class PrestashopGetOrderStateApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopOrderState::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(1, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(1, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(1, $result->getTemplate());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getTemplate()->first());
+        $this->assertCount(1, $result->template);
+        $this->assertInstanceOf(PrestashopItem::class, $result->template[0]);
     }
 
     public function testMultilang(): void
@@ -44,13 +44,13 @@ class PrestashopGetOrderStateApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopOrderState::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(2, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(2, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(2, $result->getTemplate());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getTemplate()->first());
+        $this->assertCount(2, $result->template);
+        $this->assertInstanceOf(PrestashopItem::class, $result->template[0]);
     }
 
     public function testList(): void
@@ -64,7 +64,7 @@ class PrestashopGetOrderStateApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopOrderStates::class, $result);
-        $this->assertCount(2, $result->getOrderStates());
-        $this->assertInstanceOf(PrestashopOrderState::class, $result->getOrderStates()->first());
+        $this->assertCount(2, $result->orderStates);
+        $this->assertInstanceOf(PrestashopOrderState::class, $result->orderStates[0]);
     }
 }

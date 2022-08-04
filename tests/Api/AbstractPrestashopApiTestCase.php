@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
 use PHPUnit\Framework\TestCase;
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\ScraperPrestashop\Api\PrestashopGetApi;
 use Scraper\ScraperPrestashop\Request\PrestashopGetRequest;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -50,9 +50,11 @@ abstract class AbstractPrestashopApiTestCase extends TestCase
 
         $responseInterface = $this->createMock(ResponseInterface::class);
         $responseInterface
-            ->method('getStatusCode')->willReturn($statusCode);
+            ->method('getStatusCode')->willReturn($statusCode)
+        ;
         $responseInterface
-            ->method('getContent')->willReturn($this->loadFixture($fixture));
+            ->method('getContent')->willReturn($this->loadFixture($fixture))
+        ;
 
         $prestashopGetApi = new PrestashopGetApi(
             $scraperRequest,

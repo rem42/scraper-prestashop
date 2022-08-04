@@ -1,12 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Normalizer;
 
 use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Tnt\PrestashopTntOfficielDeliveryPoint;
-use Symfony\Component\Serializer\Normalizer\ContextAwareDenormalizerInterface;
+use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-class PrestashopDeliveryPointNormalizer implements ContextAwareDenormalizerInterface
+class PrestashopDeliveryPointNormalizer implements DenormalizerInterface
 {
     private ObjectNormalizer $normalizer;
 
@@ -20,6 +20,9 @@ class PrestashopDeliveryPointNormalizer implements ContextAwareDenormalizerInter
      */
     public function denormalize($data, string $type, string $format = null, array $context = [])
     {
+        if (!\is_string($data)) {
+            return $data;
+        }
         $data = unserialize($data, [PrestashopTntOfficielDeliveryPoint::class]);
         return $this->normalizer->denormalize($data, PrestashopTntOfficielDeliveryPoint::class);
     }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,12 +23,12 @@ class PrestashopGetCountryApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCountry::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals('DE', $result->getIsoCode());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals('DE', $result->isoCode);
 
-        $this->assertCount(1, $result->getName());
+        $this->assertCount(1, $result->name);
 
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
     }
 
     public function testMultilang(): void
@@ -43,12 +43,12 @@ class PrestashopGetCountryApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCountry::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals('DE', $result->getIsoCode());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals('DE', $result->isoCode);
 
-        $this->assertCount(2, $result->getName());
+        $this->assertCount(2, $result->name);
 
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
     }
 
     public function testList(): void
@@ -62,7 +62,7 @@ class PrestashopGetCountryApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopCountries::class, $result);
-        $this->assertCount(2, $result->getCountries());
-        $this->assertInstanceOf(PrestashopCountry::class, $result->getCountries()->first());
+        $this->assertCount(2, $result->countries);
+        $this->assertInstanceOf(PrestashopCountry::class, $result->countries[0]);
     }
 }

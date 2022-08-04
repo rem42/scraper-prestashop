@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,10 +23,10 @@ class PrestashopGetProductOptionValueApiTest extends AbstractPrestashopApiTestCa
 
         $this->assertInstanceOf(PrestashopProductOptionValue::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(1, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(1, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
     }
 
     public function testMultilang(): void
@@ -41,10 +41,10 @@ class PrestashopGetProductOptionValueApiTest extends AbstractPrestashopApiTestCa
 
         $this->assertInstanceOf(PrestashopProductOptionValue::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(2, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(2, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
     }
 
     public function testList(): void
@@ -58,7 +58,7 @@ class PrestashopGetProductOptionValueApiTest extends AbstractPrestashopApiTestCa
         );
 
         $this->assertInstanceOf(PrestashopProductOptionValues::class, $result);
-        $this->assertCount(2, $result->getProductOptionValues());
-        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->getProductOptionValues()->first());
+        $this->assertCount(2, $result->productOptionValues);
+        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->productOptionValues[0]);
     }
 }

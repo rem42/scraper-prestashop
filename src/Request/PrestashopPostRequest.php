@@ -1,16 +1,15 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Request;
 
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Method;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\Scraper\Request\RequestBody;
 use Scraper\ScraperPrestashop\Entity\PrestashopPost;
 use Scraper\ScraperPrestashop\Factory\SerializerFactory;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 
-/**
- * @Scraper(method="POST")
- */
+#[Scraper(method: Method::POST)]
 class PrestashopPostRequest extends PrestashopRequest implements RequestBody
 {
     protected PrestashopPost $prestashopPost;
