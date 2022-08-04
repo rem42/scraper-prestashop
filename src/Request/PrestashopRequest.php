@@ -1,16 +1,15 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Request;
 
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Scheme;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\Scraper\Request\RequestAuthBasic;
 use Scraper\Scraper\Request\RequestHeaders;
 use Scraper\Scraper\Request\RequestQuery;
 use Scraper\Scraper\Request\ScraperRequest;
 
-/**
- * @Scraper(scheme="HTTPS", host="{host}", path="/api/{resource}/{id}")
- */
+#[Scraper(scheme: Scheme::HTTPS, host: '{host}', path: '/api/{resource}/{id}')]
 abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBasic, RequestHeaders, RequestQuery
 {
     protected ?int $id = null;

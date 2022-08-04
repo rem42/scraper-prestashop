@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -22,10 +22,10 @@ class PrestashopGetOrderInvoiceApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopOrderInvoice::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(6, $result->getIdOrder());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(6, $result->idOrder);
 
-        $this->assertInstanceOf(\DateTimeInterface::class, $result->getDateAdd());
+        $this->assertInstanceOf(\DateTimeInterface::class, $result->dateAdd);
     }
 
     public function testList(): void
@@ -39,7 +39,7 @@ class PrestashopGetOrderInvoiceApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopOrderInvoices::class, $result);
-        $this->assertCount(2, $result->getOrderInvoices());
-        $this->assertInstanceOf(PrestashopOrderInvoice::class, $result->getOrderInvoices()->first());
+        $this->assertCount(2, $result->orderInvoices);
+        $this->assertInstanceOf(PrestashopOrderInvoice::class, $result->orderInvoices[0]);
     }
 }

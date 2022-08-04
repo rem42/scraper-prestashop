@@ -1,16 +1,15 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Request;
 
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Method;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\Scraper\Request\RequestBody;
 use Scraper\ScraperPrestashop\Entity\PrestashopPut;
 use Scraper\ScraperPrestashop\Factory\SerializerFactory;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 
-/**
- * @Scraper(method="PUT")
- */
+#[Scraper(method: Method::PUT)]
 class PrestashopPutRequest extends PrestashopRequest implements RequestBody
 {
     protected PrestashopPut $prestashopPut;

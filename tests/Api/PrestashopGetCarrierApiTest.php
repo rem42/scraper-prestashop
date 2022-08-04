@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,12 +23,12 @@ class PrestashopGetCarrierApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCarrier::class, $result);
 
-        $this->assertEquals(42, $result->getId());
-        $this->assertEquals(24, $result->getIdReference());
+        $this->assertEquals(42, $result->id);
+        $this->assertEquals(24, $result->idReference);
 
-        $this->assertCount(1, $result->getDelay());
+        $this->assertCount(1, $result->delay);
 
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDelay()->first());
+        $this->assertInstanceOf(PrestashopItem::class, $result->delay[0]);
     }
 
     public function testMultilang(): void
@@ -43,12 +43,12 @@ class PrestashopGetCarrierApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCarrier::class, $result);
 
-        $this->assertEquals(42, $result->getId());
-        $this->assertEquals(24, $result->getIdReference());
+        $this->assertEquals(42, $result->id);
+        $this->assertEquals(24, $result->idReference);
 
-        $this->assertCount(2, $result->getDelay());
+        $this->assertCount(2, $result->delay);
 
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDelay()->first());
+        $this->assertInstanceOf(PrestashopItem::class, $result->delay[0]);
     }
 
     public function testList(): void
@@ -62,7 +62,7 @@ class PrestashopGetCarrierApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopCarriers::class, $result);
-        $this->assertCount(2, $result->getCarriers());
-        $this->assertInstanceOf(PrestashopCarrier::class, $result->getCarriers()->first());
+        $this->assertCount(2, $result->carriers);
+        $this->assertInstanceOf(PrestashopCarrier::class, $result->carriers[0]);
     }
 }

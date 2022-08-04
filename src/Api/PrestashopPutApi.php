@@ -1,16 +1,18 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Api;
 
 use Scraper\ScraperPrestashop\Exception\PrestashopUnexpectedException;
-use Scraper\ScraperPrestashop\Factory\SerializerFactory;
 use Scraper\ScraperPrestashop\Request\PrestashopRequest;
 use Scraper\ScraperPrestashop\Tools\ResourceMapping;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 
 class PrestashopPutApi extends PrestashopApi
 {
-    public function execute()
+    /**
+     * @return object|array<object>
+     */
+    public function execute(): object|array
     {
         $content = $this->response->getContent();
 
@@ -19,18 +21,20 @@ class PrestashopPutApi extends PrestashopApi
         }
 
         $className = ResourceMapping::find($this->request);
-        $data      = json_decode($content, true, 512, \JSON_THROW_ON_ERROR);
-        $content   = json_encode($data[ResourceMapping::singularize($this->request)], \JSON_THROW_ON_ERROR);
+        /** @var array<string, mixed> $data */
+        $data    = json_decode($content, true, 512, \JSON_THROW_ON_ERROR);
+        $content = json_encode($data[ResourceMapping::singularize($this->request)], \JSON_THROW_ON_ERROR);
 
-        $serializer = SerializerFactory::create();
-
-        return $serializer->deserialize(
-            $content,
-            $className,
-            'json',
-            [
-                AbstractObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true,
-            ]
-        );
+        /* @phpstan-ignore-next-line */
+        return $this->serializer
+            ->deserialize(
+                $content,
+                $className,
+                'json',
+                [
+                    AbstractObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true,
+                ]
+            )
+        ;
     }
 }

@@ -1,14 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Request;
 
-use Scraper\Scraper\Annotation\Scraper;
-use Scraper\Scraper\Request\RequestQuery;
+use Scraper\Scraper\Attribute\Method;
+use Scraper\Scraper\Attribute\Scraper;
 
-/**
- * @Scraper(method="GET")
- */
-class PrestashopGetRequest extends PrestashopRequest implements RequestQuery
+#[Scraper(method: Method::GET)]
+class PrestashopGetRequest extends PrestashopRequest
 {
     private ?string $limit = null;
 

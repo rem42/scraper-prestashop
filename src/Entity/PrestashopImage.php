@@ -1,20 +1,14 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopImage
 {
-    private ?int $id = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    public ?int $id = null;
 
     public function setId(?int $id): self
     {
         $this->id = $id;
-
         return $this;
     }
 }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -21,14 +21,14 @@ class PrestashopGetAddressApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopAddress::class, $result);
 
-        $this->assertEquals(42, $result->getId());
-        $this->assertEquals(24, $result->getIdCustomer());
+        $this->assertEquals(42, $result->id);
+        $this->assertEquals(24, $result->idCustomer);
 
-        $this->assertFalse($result->getDeleted());
+        $this->assertFalse($result->deleted);
 
-        $this->assertInstanceOf(\DateTimeInterface::class, $result->getDateAdd());
+        $this->assertInstanceOf(\DateTimeInterface::class, $result->dateAdd);
 
-        $this->assertInstanceOf(\DateTimeInterface::class, $result->getDateUpd());
+        $this->assertInstanceOf(\DateTimeInterface::class, $result->dateUpd);
     }
 
     public function testList(): void
@@ -41,7 +41,7 @@ class PrestashopGetAddressApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopAddresses::class, $result);
-        $this->assertCount(2, $result->getAddresses());
-        $this->assertInstanceOf(PrestashopAddress::class, $result->getAddresses()->first());
+        $this->assertCount(2, $result->addresses);
+        $this->assertInstanceOf(PrestashopAddress::class, $result->addresses[0]);
     }
 }
