@@ -4,8 +4,8 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopPut
 {
-    public ?PrestashopOrderCarrier $orderCarrier     = null;
-    public ?PrestashopOrderHistory $orderHistory     = null;
+    public ?PrestashopOrderCarrier $orderCarrier = null;
+    public ?PrestashopOrderHistory $orderHistory = null;
     public ?PrestashopStockAvailable $stockAvailable = null;
 
     public function setOrderCarrier(?PrestashopOrderCarrier $orderCarrier): self

@@ -5,17 +5,17 @@ namespace Scraper\ScraperPrestashop\Entity;
 final class PrestashopOrderRow
 {
     public ?string $productEan13;
-    public ?int $id                  = null;
-    public ?int $productId           = null;
-    public ?int $productAttributeId  = null;
-    public ?int $productQuantity     = null;
-    public ?string $productName      = null;
+    public ?int $id = null;
+    public ?int $productId = null;
+    public ?int $productAttributeId = null;
+    public ?int $productQuantity = null;
+    public ?string $productName = null;
     public ?string $productReference = null;
-    public ?string $productIsbn      = null;
-    public ?string $productUpc       = null;
-    public ?float $productPrice      = null;
-    public ?float $unitPriceTaxIncl  = null;
-    public ?float $unitPriceTaxExcl  = null;
+    public ?string $productIsbn = null;
+    public ?string $productUpc = null;
+    public ?float $productPrice = null;
+    public ?float $unitPriceTaxIncl = null;
+    public ?float $unitPriceTaxExcl = null;
 
     public function setProductEan13(?string $productEan13): self
     {

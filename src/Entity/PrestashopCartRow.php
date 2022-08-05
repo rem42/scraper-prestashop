@@ -4,10 +4,10 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopCartRow
 {
-    public ?int $idProduct          = null;
+    public ?int $idProduct = null;
     public ?int $idProductAttribute = null;
-    public ?int $idAddressDelivery  = null;
-    public ?int $quantity           = null;
+    public ?int $idAddressDelivery = null;
+    public ?int $quantity = null;
 
     public function setIdProduct(?int $idProduct): self
     {

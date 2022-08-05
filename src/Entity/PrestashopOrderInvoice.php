@@ -4,25 +4,25 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopOrderInvoice
 {
-    public ?int $id                           = null;
-    public ?int $idOrder                      = null;
-    public ?int $number                       = null;
-    public ?int $deliveryNumber               = null;
-    public ?\DateTimeInterface $deliveryDate  = null;
-    public ?float $totalDiscountTaxExcl       = null;
-    public ?float $totalDiscountTaxIncl       = null;
-    public ?float $totalPaidTaxExcl           = null;
-    public ?float $totalPaidTaxIncl           = null;
-    public ?float $totalProducts              = null;
-    public ?float $totalProductsWt            = null;
-    public ?float $totalShippingTaxExcl       = null;
-    public ?float $totalShippingTaxIncl       = null;
+    public ?int $id = null;
+    public ?int $idOrder = null;
+    public ?int $number = null;
+    public ?int $deliveryNumber = null;
+    public ?\DateTimeInterface $deliveryDate = null;
+    public ?float $totalDiscountTaxExcl = null;
+    public ?float $totalDiscountTaxIncl = null;
+    public ?float $totalPaidTaxExcl = null;
+    public ?float $totalPaidTaxIncl = null;
+    public ?float $totalProducts = null;
+    public ?float $totalProductsWt = null;
+    public ?float $totalShippingTaxExcl = null;
+    public ?float $totalShippingTaxIncl = null;
     public ?int $shippingTaxComputationMethod = null;
-    public ?float $totalWrappingTaxExcl       = null;
-    public ?float $totalWrappingTaxIncl       = null;
-    public ?string $shopAddress               = null;
-    public ?string $note                      = null;
-    public ?\DateTimeInterface $dateAdd       = null;
+    public ?float $totalWrappingTaxExcl = null;
+    public ?float $totalWrappingTaxIncl = null;
+    public ?string $shopAddress = null;
+    public ?string $note = null;
+    public ?\DateTimeInterface $dateAdd = null;
 
     public function setId(?int $id): self
     {

@@ -5,25 +5,25 @@ namespace Scraper\ScraperPrestashop\Entity;
 final class PrestashopStockMovement
 {
     public ?string $ean13;
-    public ?int $id                     = null;
-    public ?int $idProduct              = null;
-    public ?int $idProductAttribute     = null;
-    public ?int $idWarehouse            = null;
-    public ?int $idCurrency             = null;
-    public ?string $managementType      = null;
-    public ?int $idEmployee             = null;
-    public ?int $idStock                = null;
-    public ?int $idStockMvtReason       = null;
-    public ?int $idOrder                = null;
-    public ?int $idSupplyOrder          = null;
-    public ?string $productName         = null;
-    public ?string $upc                 = null;
-    public ?string $reference           = null;
-    public ?int $physicalQuantity       = null;
-    public ?bool $sign                  = null;
-    public ?float $lastWa               = null;
-    public ?float $currentWa            = null;
-    public ?float $priceTe              = null;
+    public ?int $id = null;
+    public ?int $idProduct = null;
+    public ?int $idProductAttribute = null;
+    public ?int $idWarehouse = null;
+    public ?int $idCurrency = null;
+    public ?string $managementType = null;
+    public ?int $idEmployee = null;
+    public ?int $idStock = null;
+    public ?int $idStockMvtReason = null;
+    public ?int $idOrder = null;
+    public ?int $idSupplyOrder = null;
+    public ?string $productName = null;
+    public ?string $upc = null;
+    public ?string $reference = null;
+    public ?int $physicalQuantity = null;
+    public ?bool $sign = null;
+    public ?float $lastWa = null;
+    public ?float $currentWa = null;
+    public ?float $priceTe = null;
     public ?\DateTimeInterface $dateAdd = null;
 
     public function setEan13(?string $ean13): self

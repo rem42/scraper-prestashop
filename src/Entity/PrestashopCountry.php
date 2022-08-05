@@ -6,16 +6,16 @@ final class PrestashopCountry
 {
     public ?bool $containsStates = null;
     /** @var array<int, PrestashopItem> */
-    public array $name                     = [];
-    public ?int $id                        = null;
-    public ?int $idCurrency                = null;
-    public ?int $callPrefix                = null;
-    public ?string $isoCode                = null;
-    public ?bool $active                   = null;
+    public array $name = [];
+    public ?int $id = null;
+    public ?int $idCurrency = null;
+    public ?int $callPrefix = null;
+    public ?string $isoCode = null;
+    public ?bool $active = null;
     public ?bool $needIdentificationNumber = null;
-    public ?bool $needZipCode              = null;
-    public ?string $zipCodeFormat          = null;
-    public ?bool $displayTaxLabel          = null;
+    public ?bool $needZipCode = null;
+    public ?string $zipCodeFormat = null;
+    public ?bool $displayTaxLabel = null;
 
     public function addName(PrestashopItem $prestashopItem): self
     {

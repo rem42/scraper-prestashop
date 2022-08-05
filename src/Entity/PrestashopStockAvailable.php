@@ -4,14 +4,14 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopStockAvailable
 {
-    public ?int $id                 = null;
-    public ?int $idProduct          = null;
+    public ?int $id = null;
+    public ?int $idProduct = null;
     public ?int $idProductAttribute = null;
-    public ?int $idShop             = null;
-    public ?int $idShopGroup        = null;
-    public ?int $quantity           = null;
-    public ?int $dependsOnStock     = null;
-    public ?int $outOfStock         = null;
+    public ?int $idShop = null;
+    public ?int $idShopGroup = null;
+    public ?int $quantity = null;
+    public ?int $dependsOnStock = null;
+    public ?int $outOfStock = null;
 
     public function setId(?int $id): self
     {

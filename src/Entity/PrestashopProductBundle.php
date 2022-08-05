@@ -4,9 +4,9 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopProductBundle
 {
-    public ?int $id                 = null;
+    public ?int $id = null;
     public ?int $idProductAttribute = null;
-    public ?int $quantity           = null;
+    public ?int $quantity = null;
 
     public function setId(?int $id): self
     {

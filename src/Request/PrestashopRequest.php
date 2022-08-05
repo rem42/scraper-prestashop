@@ -22,8 +22,8 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
 
     public function __construct(string $host, string $key, string $resource)
     {
-        $this->host     = $host;
-        $this->key      = $key;
+        $this->host = $host;
+        $this->key = $key;
         $this->resource = $resource;
     }
 
@@ -56,7 +56,7 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
     {
         return [
             'Output-Format' => 'JSON',
-            'Io-Format'     => 'JSON',
+            'Io-Format' => 'JSON',
         ];
     }
 

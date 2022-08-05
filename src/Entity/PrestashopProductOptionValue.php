@@ -5,11 +5,11 @@ namespace Scraper\ScraperPrestashop\Entity;
 final class PrestashopProductOptionValue
 {
     /** @var array<int, PrestashopItem> */
-    public array $name            = [];
-    public ?int $id               = null;
+    public array $name = [];
+    public ?int $id = null;
     public ?int $idAttributeGroup = null;
-    public ?string $color         = null;
-    public ?int $position         = null;
+    public ?string $color = null;
+    public ?int $position = null;
 
     public function addName(PrestashopItem $name): self
     {

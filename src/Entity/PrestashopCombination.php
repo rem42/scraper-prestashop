@@ -5,22 +5,22 @@ namespace Scraper\ScraperPrestashop\Entity;
 final class PrestashopCombination
 {
     public ?string $ean13;
-    public ?int $id                              = null;
-    public ?int $idProduct                       = null;
-    public ?string $location                     = null;
-    public ?string $isbn                         = null;
-    public ?string $upc                          = null;
-    public ?int $quantity                        = null;
-    public ?string $reference                    = null;
-    public ?string $supplierReference            = null;
-    public ?float $wholesalePrice                = null;
-    public ?float $price                         = null;
-    public ?float $ecotax                        = null;
-    public ?float $weight                        = null;
-    public ?string $unitPriceImpact              = null;
-    public ?int $minimalQuantity                 = null;
-    public ?bool $defaultOn                      = null;
-    public ?\DateTime $availableDate             = null;
+    public ?int $id = null;
+    public ?int $idProduct = null;
+    public ?string $location = null;
+    public ?string $isbn = null;
+    public ?string $upc = null;
+    public ?int $quantity = null;
+    public ?string $reference = null;
+    public ?string $supplierReference = null;
+    public ?float $wholesalePrice = null;
+    public ?float $price = null;
+    public ?float $ecotax = null;
+    public ?float $weight = null;
+    public ?string $unitPriceImpact = null;
+    public ?int $minimalQuantity = null;
+    public ?bool $defaultOn = null;
+    public ?\DateTime $availableDate = null;
     public ?PrestashopAssociations $associations = null;
 
     public function setEan13(?string $ean13): self

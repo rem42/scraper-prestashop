@@ -4,10 +4,10 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopOrderHistory
 {
-    public ?int $id                     = null;
-    public ?string $idEmployee          = null;
-    public ?int $idOrderState           = null;
-    public ?int $idOrder                = null;
+    public ?int $id = null;
+    public ?string $idEmployee = null;
+    public ?int $idOrderState = null;
+    public ?int $idOrder = null;
     public ?\DateTimeInterface $dateAdd = null;
 
     public function setId(?int $id): self

@@ -4,27 +4,27 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopCarrier
 {
-    public ?int $id                    = null;
-    public ?bool $deleted              = null;
-    public ?bool $isModule             = null;
-    public ?int $idTaxRulesGroup       = null;
-    public ?int $idReference           = null;
-    public ?string $name               = null;
-    public ?bool $active               = null;
-    public ?bool $isFree               = null;
-    public ?string $url                = null;
-    public ?int $shippingHandling      = null;
-    public ?int $shippingExternal      = null;
-    public ?int $rangeBehavior         = null;
-    public ?int $shippingMethod        = null;
-    public ?int $maxWidth              = null;
-    public ?int $maxHeight             = null;
-    public ?int $maxDepth              = null;
-    public ?float $maxWeight           = null;
-    public ?int $grade                 = null;
+    public ?int $id = null;
+    public ?bool $deleted = null;
+    public ?bool $isModule = null;
+    public ?int $idTaxRulesGroup = null;
+    public ?int $idReference = null;
+    public ?string $name = null;
+    public ?bool $active = null;
+    public ?bool $isFree = null;
+    public ?string $url = null;
+    public ?int $shippingHandling = null;
+    public ?int $shippingExternal = null;
+    public ?int $rangeBehavior = null;
+    public ?int $shippingMethod = null;
+    public ?int $maxWidth = null;
+    public ?int $maxHeight = null;
+    public ?int $maxDepth = null;
+    public ?float $maxWeight = null;
+    public ?int $grade = null;
     public ?string $externalModuleName = null;
-    public ?int $needRange             = null;
-    public ?int $position              = null;
+    public ?int $needRange = null;
+    public ?int $position = null;
     /** @var array<int, PrestashopItem> */
     public array $delay = [];
 

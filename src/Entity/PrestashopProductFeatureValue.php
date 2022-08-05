@@ -5,10 +5,10 @@ namespace Scraper\ScraperPrestashop\Entity;
 final class PrestashopProductFeatureValue
 {
     /** @var array<int, PrestashopItem> */
-    public array $value       = [];
-    public ?int $id           = null;
+    public array $value = [];
+    public ?int $id = null;
     public ?string $idFeature = null;
-    public ?bool $custom      = null;
+    public ?bool $custom = null;
 
     public function addValue(PrestashopItem $value): self
     {

@@ -7,11 +7,11 @@ final class PrestashopProductOption
     /** @var array<int, PrestashopItem> */
     public array $name = [];
     /** @var array<int, PrestashopItem> */
-    public array $publicName                     = [];
-    public ?int $id                              = null;
-    public ?bool $isColorGroup                   = null;
-    public ?string $groupType                    = null;
-    public ?int $position                        = null;
+    public array $publicName = [];
+    public ?int $id = null;
+    public ?bool $isColorGroup = null;
+    public ?string $groupType = null;
+    public ?int $position = null;
     public ?PrestashopAssociations $associations = null;
 
     public function addName(PrestashopItem $name): self

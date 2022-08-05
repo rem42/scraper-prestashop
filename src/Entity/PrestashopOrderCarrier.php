@@ -4,14 +4,14 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopOrderCarrier
 {
-    public ?int $id                     = null;
-    public ?int $idOrder                = null;
-    public ?int $idCarrier              = null;
-    public ?int $idOrderInvoice         = null;
-    public ?float $weight               = null;
-    public ?float $shippingCostTaxExcl  = null;
-    public ?float $shippingCostTaxIncl  = null;
-    public ?string $trackingNumber      = null;
+    public ?int $id = null;
+    public ?int $idOrder = null;
+    public ?int $idCarrier = null;
+    public ?int $idOrderInvoice = null;
+    public ?float $weight = null;
+    public ?float $shippingCostTaxExcl = null;
+    public ?float $shippingCostTaxIncl = null;
+    public ?string $trackingNumber = null;
     public ?\DateTimeInterface $dateAdd = null;
 
     public function setId(?int $id): self

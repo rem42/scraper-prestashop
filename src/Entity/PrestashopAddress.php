@@ -4,27 +4,27 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopAddress
 {
-    public ?int $id                     = null;
-    public ?int $idCustomer             = null;
-    public ?int $idManufacturer         = null;
-    public ?int $idSupplier             = null;
-    public ?int $idWarehouse            = null;
-    public ?int $idCountry              = null;
-    public ?int $idState                = null;
-    public ?string $alias               = null;
-    public ?string $company             = null;
-    public ?string $lastname            = null;
-    public ?string $firstname           = null;
-    public ?string $vatNumber           = null;
-    public ?string $address1            = null;
-    public ?string $address2            = null;
-    public ?string $postcode            = null;
-    public ?string $city                = null;
-    public ?string $other               = null;
-    public ?string $phone               = null;
-    public ?string $phoneMobile         = null;
-    public ?string $dni                 = null;
-    public ?bool $deleted               = null;
+    public ?int $id = null;
+    public ?int $idCustomer = null;
+    public ?int $idManufacturer = null;
+    public ?int $idSupplier = null;
+    public ?int $idWarehouse = null;
+    public ?int $idCountry = null;
+    public ?int $idState = null;
+    public ?string $alias = null;
+    public ?string $company = null;
+    public ?string $lastname = null;
+    public ?string $firstname = null;
+    public ?string $vatNumber = null;
+    public ?string $address1 = null;
+    public ?string $address2 = null;
+    public ?string $postcode = null;
+    public ?string $city = null;
+    public ?string $other = null;
+    public ?string $phone = null;
+    public ?string $phoneMobile = null;
+    public ?string $dni = null;
+    public ?bool $deleted = null;
     public ?\DateTimeInterface $dateAdd = null;
     public ?\DateTimeInterface $dateUpd = null;
 

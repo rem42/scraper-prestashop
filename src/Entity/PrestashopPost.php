@@ -4,7 +4,7 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopPost
 {
-    public ?PrestashopOrderHistory $orderHistory     = null;
+    public ?PrestashopOrderHistory $orderHistory = null;
     public ?PrestashopStockAvailable $stockAvailable = null;
 
     public function setOrderHistory(?PrestashopOrderHistory $orderHistory): self

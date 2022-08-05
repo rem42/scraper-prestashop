@@ -4,12 +4,12 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopStockMovementReason
 {
-    public ?int $id                     = null;
-    public ?string $sign                = null;
-    public ?int $deleted                = null;
+    public ?int $id = null;
+    public ?string $sign = null;
+    public ?int $deleted = null;
     public ?\DateTimeInterface $dateAdd = null;
     public ?\DateTimeInterface $dateUpd = null;
-    public ?string $name                = null;
+    public ?string $name = null;
 
     public function setId(?int $id): self
     {

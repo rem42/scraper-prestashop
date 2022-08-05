@@ -4,12 +4,12 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopState
 {
-    public ?int $id         = null;
-    public ?int $idZone     = null;
-    public ?int $idCountry  = null;
+    public ?int $id = null;
+    public ?int $idZone = null;
+    public ?int $idCountry = null;
     public ?string $isoCode = null;
-    public ?string $name    = null;
-    public ?bool $active    = null;
+    public ?string $name = null;
+    public ?bool $active = null;
 
     public function setId(?int $id): self
     {

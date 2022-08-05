@@ -4,14 +4,14 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopCategory
 {
-    public ?int $id                     = null;
-    public ?int $idParent               = null;
-    public ?int $levelDepth             = null;
-    public ?int $nbProductsRecursive    = null;
-    public ?int $active                 = null;
-    public ?int $idShopDefault          = null;
-    public ?int $isRootCategory         = null;
-    public ?int $position               = null;
+    public ?int $id = null;
+    public ?int $idParent = null;
+    public ?int $levelDepth = null;
+    public ?int $nbProductsRecursive = null;
+    public ?int $active = null;
+    public ?int $idShopDefault = null;
+    public ?int $isRootCategory = null;
+    public ?int $position = null;
     public ?\DateTimeInterface $dateAdd = null;
     public ?\DateTimeInterface $dateUpd = null;
     /** @var array<int, PrestashopItem> */

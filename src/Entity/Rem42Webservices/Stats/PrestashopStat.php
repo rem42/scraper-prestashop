@@ -5,5 +5,5 @@ namespace Scraper\ScraperPrestashop\Entity\Rem42Webservices\Stats;
 final class PrestashopStat
 {
     public ?int $productCount = null;
-    public ?int $orderCount   = null;
+    public ?int $orderCount = null;
 }

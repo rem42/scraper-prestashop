@@ -4,24 +4,24 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopCart
 {
-    public ?int $id                              = null;
-    public ?int $idAddressDelivery               = null;
-    public ?int $idAddressInvoice                = null;
-    public ?int $idCurrency                      = null;
-    public ?int $idCustomer                      = null;
-    public ?int $idGuest                         = null;
-    public ?int $idLang                          = null;
-    public ?int $idShopGroup                     = null;
-    public ?int $idShop                          = null;
-    public ?int $idCarrier                       = null;
-    public ?bool $recyclable                     = null;
-    public ?bool $gift                           = null;
-    public ?string $giftMessage                  = null;
-    public ?bool $mobileTheme                    = null;
-    public ?string $secureKey                    = null;
-    public ?bool $allowSeperatedPackage          = null;
-    public ?\DateTime $dateAdd                   = null;
-    public ?\DateTime $dateUpd                   = null;
+    public ?int $id = null;
+    public ?int $idAddressDelivery = null;
+    public ?int $idAddressInvoice = null;
+    public ?int $idCurrency = null;
+    public ?int $idCustomer = null;
+    public ?int $idGuest = null;
+    public ?int $idLang = null;
+    public ?int $idShopGroup = null;
+    public ?int $idShop = null;
+    public ?int $idCarrier = null;
+    public ?bool $recyclable = null;
+    public ?bool $gift = null;
+    public ?string $giftMessage = null;
+    public ?bool $mobileTheme = null;
+    public ?string $secureKey = null;
+    public ?bool $allowSeperatedPackage = null;
+    public ?\DateTime $dateAdd = null;
+    public ?\DateTime $dateUpd = null;
     public ?PrestashopAssociations $associations = null;
 
     public function setId(?int $id): self

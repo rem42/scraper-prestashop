@@ -7,21 +7,21 @@ final class PrestashopOrderState
     /** @var array<int, PrestashopItem> */
     public array $name = [];
     /** @var array<int, PrestashopItem> */
-    public array $template     = [];
-    public ?int $id            = null;
-    public ?bool $unremovable  = null;
-    public ?bool $delivery     = null;
-    public ?bool $hidden       = null;
-    public ?bool $sendEmail    = null;
+    public array $template = [];
+    public ?int $id = null;
+    public ?bool $unremovable = null;
+    public ?bool $delivery = null;
+    public ?bool $hidden = null;
+    public ?bool $sendEmail = null;
     public ?string $moduleName = null;
-    public ?bool $invoice      = null;
-    public ?string $color      = null;
-    public ?bool $logable      = null;
-    public ?bool $shipped      = null;
-    public ?bool $paid         = null;
-    public ?bool $pdfDelivery  = null;
-    public ?bool $pdfInvoice   = null;
-    public ?bool $deleted      = null;
+    public ?bool $invoice = null;
+    public ?string $color = null;
+    public ?bool $logable = null;
+    public ?bool $shipped = null;
+    public ?bool $paid = null;
+    public ?bool $pdfDelivery = null;
+    public ?bool $pdfInvoice = null;
+    public ?bool $deleted = null;
 
     public function addName(PrestashopItem $name): self
     {
