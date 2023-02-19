@@ -2,15 +2,14 @@
 
 namespace Scraper\ScraperPrestashop\Request;
 
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Method;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\Scraper\Request\RequestBody;
 use Scraper\ScraperPrestashop\Entity\PrestashopPost;
 use Scraper\ScraperPrestashop\Factory\SerializerFactory;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 
-/**
- * @Scraper(method="POST")
- */
+#[Scraper(method: Method::POST)]
 class PrestashopPostRequest extends PrestashopRequest implements RequestBody
 {
     protected PrestashopPost $prestashopPost;
@@ -29,9 +28,7 @@ class PrestashopPostRequest extends PrestashopRequest implements RequestBody
 
     public function getBody()
     {
-        $serializer = SerializerFactory::create();
-
-        return $serializer->serialize($this->prestashopPost, 'xml', [
+        return SerializerFactory::create()->serialize($this->prestashopPost, 'xml', [
             AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
         ]);
     }

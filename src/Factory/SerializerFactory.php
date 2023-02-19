@@ -26,7 +26,7 @@ class SerializerFactory
 
         $metadataAwareNameConverter = new MetadataAwareNameConverter($classMetadataFactory, new CamelCaseToSnakeCaseNameConverter());
 
-        $encoders    = ['json' => new JsonEncoder(), 'xml' => new XmlEncoder()];
+        $encoders = ['json' => new JsonEncoder(), 'xml' => new XmlEncoder()];
         $normalizers = [
             new PrestashopItemNormalizer(),
             new PrestashopDeliveryPointNormalizer(new ObjectNormalizer()),

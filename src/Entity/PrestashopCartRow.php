@@ -17,9 +17,6 @@ final class PrestashopCartRow
         return $this->idProduct;
     }
 
-    /**
-     * @return PrestashopCartRow
-     */
     public function setIdProduct(?int $idProduct): self
     {
         $this->idProduct = $idProduct;
@@ -32,9 +29,6 @@ final class PrestashopCartRow
         return $this->idProductAttribute;
     }
 
-    /**
-     * @return PrestashopCartRow
-     */
     public function setIdProductAttribute(?int $idProductAttribute): self
     {
         $this->idProductAttribute = $idProductAttribute;
@@ -47,9 +41,6 @@ final class PrestashopCartRow
         return $this->idAddressDelivery;
     }
 
-    /**
-     * @return PrestashopCartRow
-     */
     public function setIdAddressDelivery(?int $idAddressDelivery): self
     {
         $this->idAddressDelivery = $idAddressDelivery;
@@ -62,9 +53,6 @@ final class PrestashopCartRow
         return $this->quantity;
     }
 
-    /**
-     * @return PrestashopCartRow
-     */
     public function setQuantity(?int $quantity): self
     {
         $this->quantity = $quantity;

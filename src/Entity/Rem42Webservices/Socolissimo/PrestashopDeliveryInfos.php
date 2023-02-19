@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\Collection;
 
 final class PrestashopDeliveryInfos
 {
-    /** @var Collection<int, PrestashopDeliveryInfos> */
+    /** @var Collection<int, self> */
     private Collection $deliveryInfos;
 
     public function __construct()
@@ -16,7 +16,7 @@ final class PrestashopDeliveryInfos
     }
 
     /**
-     * @return Collection<int, PrestashopDeliveryInfos>
+     * @return Collection<int, self>
      */
     public function getDeliveryInfos(): Collection
     {

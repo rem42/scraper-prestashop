@@ -51,9 +51,6 @@ final class PrestashopStockMovement
         return $this->ean13;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setEan13(?string $ean13): self
     {
         $this->ean13 = $ean13;
@@ -66,9 +63,6 @@ final class PrestashopStockMovement
         return $this->id;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -81,9 +75,6 @@ final class PrestashopStockMovement
         return $this->idProduct;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdProduct(?int $idProduct): self
     {
         $this->idProduct = $idProduct;
@@ -96,9 +87,6 @@ final class PrestashopStockMovement
         return $this->idProductAttribute;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdProductAttribute(?int $idProductAttribute): self
     {
         $this->idProductAttribute = $idProductAttribute;
@@ -111,9 +99,6 @@ final class PrestashopStockMovement
         return $this->idWarehouse;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdWarehouse(?int $idWarehouse): self
     {
         $this->idWarehouse = $idWarehouse;
@@ -126,9 +111,6 @@ final class PrestashopStockMovement
         return $this->idCurrency;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdCurrency(?int $idCurrency): self
     {
         $this->idCurrency = $idCurrency;
@@ -141,9 +123,6 @@ final class PrestashopStockMovement
         return $this->managementType;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setManagementType(?string $managementType): self
     {
         $this->managementType = $managementType;
@@ -156,9 +135,6 @@ final class PrestashopStockMovement
         return $this->idEmployee;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdEmployee(?int $idEmployee): self
     {
         $this->idEmployee = $idEmployee;
@@ -171,9 +147,6 @@ final class PrestashopStockMovement
         return $this->idStock;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdStock(?int $idStock): self
     {
         $this->idStock = $idStock;
@@ -186,9 +159,6 @@ final class PrestashopStockMovement
         return $this->idStockMvtReason;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdStockMvtReason(?int $idStockMvtReason): self
     {
         $this->idStockMvtReason = $idStockMvtReason;
@@ -201,9 +171,6 @@ final class PrestashopStockMovement
         return $this->idOrder;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdOrder(?int $idOrder): self
     {
         $this->idOrder = $idOrder;
@@ -216,9 +183,6 @@ final class PrestashopStockMovement
         return $this->idSupplyOrder;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setIdSupplyOrder(?int $idSupplyOrder): self
     {
         $this->idSupplyOrder = $idSupplyOrder;
@@ -231,9 +195,6 @@ final class PrestashopStockMovement
         return $this->productName;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setProductName(?string $productName): self
     {
         $this->productName = $productName;
@@ -246,9 +207,6 @@ final class PrestashopStockMovement
         return $this->upc;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setUpc(?string $upc): self
     {
         $this->upc = $upc;
@@ -261,9 +219,6 @@ final class PrestashopStockMovement
         return $this->reference;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setReference(?string $reference): self
     {
         $this->reference = $reference;
@@ -276,9 +231,6 @@ final class PrestashopStockMovement
         return $this->physicalQuantity;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setPhysicalQuantity(?int $physicalQuantity): self
     {
         $this->physicalQuantity = $physicalQuantity;
@@ -291,9 +243,6 @@ final class PrestashopStockMovement
         return $this->sign;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setSign(?bool $sign): self
     {
         $this->sign = $sign;
@@ -306,9 +255,6 @@ final class PrestashopStockMovement
         return $this->lastWa;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setLastWa(?float $lastWa): self
     {
         $this->lastWa = $lastWa;
@@ -321,9 +267,6 @@ final class PrestashopStockMovement
         return $this->currentWa;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setCurrentWa(?float $currentWa): self
     {
         $this->currentWa = $currentWa;
@@ -336,9 +279,6 @@ final class PrestashopStockMovement
         return $this->priceTe;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setPriceTe(?float $priceTe): self
     {
         $this->priceTe = $priceTe;
@@ -351,9 +291,6 @@ final class PrestashopStockMovement
         return $this->dateAdd;
     }
 
-    /**
-     * @return PrestashopStockMovement
-     */
     public function setDateAdd(?\DateTimeInterface $dateAdd): self
     {
         $this->dateAdd = $dateAdd;

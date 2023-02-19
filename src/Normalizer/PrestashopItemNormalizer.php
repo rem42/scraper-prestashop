@@ -10,7 +10,7 @@ class PrestashopItemNormalizer implements DenormalizerInterface
     /**
      * @param array<string, string> $context
      *
-     * @return PrestashopItem|PrestashopItem[]
+     * @return PrestashopItem|array<PrestashopItem>
      */
     public function denormalize($data, string $type, string $format = null, array $context = [])
     {

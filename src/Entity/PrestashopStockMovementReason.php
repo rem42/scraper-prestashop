@@ -21,9 +21,6 @@ final class PrestashopStockMovementReason
         return $this->id;
     }
 
-    /**
-     * @return PrestashopStockMovementReason
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -36,9 +33,6 @@ final class PrestashopStockMovementReason
         return $this->sign;
     }
 
-    /**
-     * @return PrestashopStockMovementReason
-     */
     public function setSign(?string $sign): self
     {
         $this->sign = $sign;
@@ -51,9 +45,6 @@ final class PrestashopStockMovementReason
         return $this->deleted;
     }
 
-    /**
-     * @return PrestashopStockMovementReason
-     */
     public function setDeleted(?int $deleted): self
     {
         $this->deleted = $deleted;
@@ -66,9 +57,6 @@ final class PrestashopStockMovementReason
         return $this->dateAdd;
     }
 
-    /**
-     * @return PrestashopStockMovementReason
-     */
     public function setDateAdd(?\DateTimeInterface $dateAdd): self
     {
         $this->dateAdd = $dateAdd;
@@ -81,9 +69,6 @@ final class PrestashopStockMovementReason
         return $this->dateUpd;
     }
 
-    /**
-     * @return PrestashopStockMovementReason
-     */
     public function setDateUpd(?\DateTimeInterface $dateUpd): self
     {
         $this->dateUpd = $dateUpd;
@@ -96,9 +81,6 @@ final class PrestashopStockMovementReason
         return $this->name;
     }
 
-    /**
-     * @return PrestashopStockMovementReason
-     */
     public function setName(?string $name): self
     {
         $this->name = $name;

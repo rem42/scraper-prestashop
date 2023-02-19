@@ -103,9 +103,6 @@ final class PrestashopOrder
         return $this->associations;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setAssociations(PrestashopAssociations $associations): self
     {
         $this->associations = $associations;
@@ -118,9 +115,6 @@ final class PrestashopOrder
         return $this->id;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -133,9 +127,6 @@ final class PrestashopOrder
         return $this->idAddressDelivery;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdAddressDelivery(?int $idAddressDelivery): self
     {
         $this->idAddressDelivery = $idAddressDelivery;
@@ -148,9 +139,6 @@ final class PrestashopOrder
         return $this->idAddressInvoice;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdAddressInvoice(?int $idAddressInvoice): self
     {
         $this->idAddressInvoice = $idAddressInvoice;
@@ -163,9 +151,6 @@ final class PrestashopOrder
         return $this->idCart;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdCart(?int $idCart): self
     {
         $this->idCart = $idCart;
@@ -178,9 +163,6 @@ final class PrestashopOrder
         return $this->idCurrency;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdCurrency(?int $idCurrency): self
     {
         $this->idCurrency = $idCurrency;
@@ -193,9 +175,6 @@ final class PrestashopOrder
         return $this->idLang;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdLang(?int $idLang): self
     {
         $this->idLang = $idLang;
@@ -208,9 +187,6 @@ final class PrestashopOrder
         return $this->idCustomer;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdCustomer(?int $idCustomer): self
     {
         $this->idCustomer = $idCustomer;
@@ -223,9 +199,6 @@ final class PrestashopOrder
         return $this->idCarrier;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdCarrier(?int $idCarrier): self
     {
         $this->idCarrier = $idCarrier;
@@ -238,9 +211,6 @@ final class PrestashopOrder
         return $this->currentState;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setCurrentState(?int $currentState): self
     {
         $this->currentState = $currentState;
@@ -253,9 +223,6 @@ final class PrestashopOrder
         return $this->module;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setModule(?string $module): self
     {
         $this->module = $module;
@@ -268,9 +235,6 @@ final class PrestashopOrder
         return $this->invoiceNumber;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setInvoiceNumber(?string $invoiceNumber): self
     {
         $this->invoiceNumber = $invoiceNumber;
@@ -283,9 +247,6 @@ final class PrestashopOrder
         return $this->invoiceDate;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setInvoiceDate(?\DateTime $invoiceDate): self
     {
         $this->invoiceDate = $invoiceDate;
@@ -298,9 +259,6 @@ final class PrestashopOrder
         return $this->deliveryNumber;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setDeliveryNumber(?string $deliveryNumber): self
     {
         $this->deliveryNumber = $deliveryNumber;
@@ -313,9 +271,6 @@ final class PrestashopOrder
         return $this->deliveryDate;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setDeliveryDate(?\DateTime $deliveryDate): self
     {
         $this->deliveryDate = $deliveryDate;
@@ -328,9 +283,6 @@ final class PrestashopOrder
         return $this->valid;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setValid(?string $valid): self
     {
         $this->valid = $valid;
@@ -343,9 +295,6 @@ final class PrestashopOrder
         return $this->dateAdd;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setDateAdd(?\DateTime $dateAdd): self
     {
         $this->dateAdd = $dateAdd;
@@ -358,9 +307,6 @@ final class PrestashopOrder
         return $this->dateUpd;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setDateUpd(?\DateTime $dateUpd): self
     {
         $this->dateUpd = $dateUpd;
@@ -373,9 +319,6 @@ final class PrestashopOrder
         return $this->shippingNumber;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setShippingNumber(?string $shippingNumber): self
     {
         $this->shippingNumber = $shippingNumber;
@@ -388,9 +331,6 @@ final class PrestashopOrder
         return $this->idShopGroup;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdShopGroup(?int $idShopGroup): self
     {
         $this->idShopGroup = $idShopGroup;
@@ -403,9 +343,6 @@ final class PrestashopOrder
         return $this->idShop;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setIdShop(?int $idShop): self
     {
         $this->idShop = $idShop;
@@ -418,9 +355,6 @@ final class PrestashopOrder
         return $this->secureKey;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setSecureKey(?string $secureKey): self
     {
         $this->secureKey = $secureKey;
@@ -433,9 +367,6 @@ final class PrestashopOrder
         return $this->payment;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setPayment(?string $payment): self
     {
         $this->payment = $payment;
@@ -448,9 +379,6 @@ final class PrestashopOrder
         return $this->recyclable;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setRecyclable(?bool $recyclable): self
     {
         $this->recyclable = $recyclable;
@@ -463,9 +391,6 @@ final class PrestashopOrder
         return $this->gift;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setGift(?bool $gift): self
     {
         $this->gift = $gift;
@@ -478,9 +403,6 @@ final class PrestashopOrder
         return $this->giftMessage;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setGiftMessage(?string $giftMessage): self
     {
         $this->giftMessage = $giftMessage;
@@ -493,9 +415,6 @@ final class PrestashopOrder
         return $this->mobileTheme;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setMobileTheme(?bool $mobileTheme): self
     {
         $this->mobileTheme = $mobileTheme;
@@ -508,9 +427,6 @@ final class PrestashopOrder
         return $this->totalDiscounts;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalDiscounts(?float $totalDiscounts): self
     {
         $this->totalDiscounts = $totalDiscounts;
@@ -523,9 +439,6 @@ final class PrestashopOrder
         return $this->totalDiscountsTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalDiscountsTaxIncl(?float $totalDiscountsTaxIncl): self
     {
         $this->totalDiscountsTaxIncl = $totalDiscountsTaxIncl;
@@ -538,9 +451,6 @@ final class PrestashopOrder
         return $this->totalDiscountsTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalDiscountsTaxExcl(?float $totalDiscountsTaxExcl): self
     {
         $this->totalDiscountsTaxExcl = $totalDiscountsTaxExcl;
@@ -553,9 +463,6 @@ final class PrestashopOrder
         return $this->totalPaid;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalPaid(?float $totalPaid): self
     {
         $this->totalPaid = $totalPaid;
@@ -568,9 +475,6 @@ final class PrestashopOrder
         return $this->totalPaidTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalPaidTaxIncl(?float $totalPaidTaxIncl): self
     {
         $this->totalPaidTaxIncl = $totalPaidTaxIncl;
@@ -583,9 +487,6 @@ final class PrestashopOrder
         return $this->totalPaidTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalPaidTaxExcl(?float $totalPaidTaxExcl): self
     {
         $this->totalPaidTaxExcl = $totalPaidTaxExcl;
@@ -598,9 +499,6 @@ final class PrestashopOrder
         return $this->totalPaidReal;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalPaidReal(?float $totalPaidReal): self
     {
         $this->totalPaidReal = $totalPaidReal;
@@ -613,9 +511,6 @@ final class PrestashopOrder
         return $this->totalProducts;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalProducts(?float $totalProducts): self
     {
         $this->totalProducts = $totalProducts;
@@ -628,9 +523,6 @@ final class PrestashopOrder
         return $this->totalProductsWt;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalProductsWt(?float $totalProductsWt): self
     {
         $this->totalProductsWt = $totalProductsWt;
@@ -643,9 +535,6 @@ final class PrestashopOrder
         return $this->totalShipping;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalShipping(?float $totalShipping): self
     {
         $this->totalShipping = $totalShipping;
@@ -658,9 +547,6 @@ final class PrestashopOrder
         return $this->totalShippingTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalShippingTaxIncl(?float $totalShippingTaxIncl): self
     {
         $this->totalShippingTaxIncl = $totalShippingTaxIncl;
@@ -673,9 +559,6 @@ final class PrestashopOrder
         return $this->totalShippingTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalShippingTaxExcl(?float $totalShippingTaxExcl): self
     {
         $this->totalShippingTaxExcl = $totalShippingTaxExcl;
@@ -688,9 +571,6 @@ final class PrestashopOrder
         return $this->carrierTaxRate;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setCarrierTaxRate(?float $carrierTaxRate): self
     {
         $this->carrierTaxRate = $carrierTaxRate;
@@ -703,9 +583,6 @@ final class PrestashopOrder
         return $this->totalWrapping;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalWrapping(?float $totalWrapping): self
     {
         $this->totalWrapping = $totalWrapping;
@@ -718,9 +595,6 @@ final class PrestashopOrder
         return $this->totalWrappingTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalWrappingTaxIncl(?float $totalWrappingTaxIncl): self
     {
         $this->totalWrappingTaxIncl = $totalWrappingTaxIncl;
@@ -733,9 +607,6 @@ final class PrestashopOrder
         return $this->totalWrappingTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setTotalWrappingTaxExcl(?float $totalWrappingTaxExcl): self
     {
         $this->totalWrappingTaxExcl = $totalWrappingTaxExcl;
@@ -748,9 +619,6 @@ final class PrestashopOrder
         return $this->roundMode;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setRoundMode(?int $roundMode): self
     {
         $this->roundMode = $roundMode;
@@ -763,9 +631,6 @@ final class PrestashopOrder
         return $this->roundType;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setRoundType(?int $roundType): self
     {
         $this->roundType = $roundType;
@@ -778,9 +643,6 @@ final class PrestashopOrder
         return $this->conversionRate;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setConversionRate(?float $conversionRate): self
     {
         $this->conversionRate = $conversionRate;
@@ -793,9 +655,6 @@ final class PrestashopOrder
         return $this->reference;
     }
 
-    /**
-     * @return PrestashopOrder
-     */
     public function setReference(?string $reference): self
     {
         $this->reference = $reference;

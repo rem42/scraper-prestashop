@@ -48,9 +48,6 @@ final class PrestashopProductFeature
         return $this->id;
     }
 
-    /**
-     * @return PrestashopProductFeature
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -63,9 +60,6 @@ final class PrestashopProductFeature
         return $this->idFeatureValue;
     }
 
-    /**
-     * @return PrestashopProductFeature
-     */
     public function setIdFeatureValue(?int $idFeatureValue): self
     {
         $this->idFeatureValue = $idFeatureValue;
@@ -78,9 +72,6 @@ final class PrestashopProductFeature
         return $this->position;
     }
 
-    /**
-     * @return PrestashopProductFeature
-     */
     public function setPosition(?string $position): self
     {
         $this->position = $position;

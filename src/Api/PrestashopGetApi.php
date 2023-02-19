@@ -10,10 +10,7 @@ use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 
 class PrestashopGetApi extends PrestashopApi
 {
-    /**
-     * @return object|object[]|string
-     */
-    public function execute()
+    public function execute(): object|array|bool|string
     {
         $content = $this->response->getContent();
 
@@ -29,19 +26,19 @@ class PrestashopGetApi extends PrestashopApi
 
         if ($this->request->getId()) {
             /** @var array<string, mixed> $data */
-            $data    = json_decode($content, true, 512, \JSON_THROW_ON_ERROR);
+            $data = json_decode($content, true, 512, \JSON_THROW_ON_ERROR);
             $content = json_encode($data[ResourceMapping::singularize($this->request)], \JSON_THROW_ON_ERROR);
         }
 
         return SerializerFactory::create()
             ->deserialize(
-            $content,
-            $className,
-            'json',
-            [
-                AbstractObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true,
-            ]
-        )
+                $content,
+                $className,
+                'json',
+                [
+                    AbstractObjectNormalizer::DISABLE_TYPE_ENFORCEMENT => true,
+                ]
+            )
         ;
     }
 }

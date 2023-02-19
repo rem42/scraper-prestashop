@@ -27,9 +27,6 @@ final class PrestashopOrderCarrier
         return $this->id;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -42,9 +39,6 @@ final class PrestashopOrderCarrier
         return $this->idOrder;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setIdOrder(?int $idOrder): self
     {
         $this->idOrder = $idOrder;
@@ -57,9 +51,6 @@ final class PrestashopOrderCarrier
         return $this->idCarrier;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setIdCarrier(?int $idCarrier): self
     {
         $this->idCarrier = $idCarrier;
@@ -72,9 +63,6 @@ final class PrestashopOrderCarrier
         return $this->idOrderInvoice;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setIdOrderInvoice(?int $idOrderInvoice): self
     {
         $this->idOrderInvoice = $idOrderInvoice;
@@ -87,9 +75,6 @@ final class PrestashopOrderCarrier
         return $this->weight;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
@@ -102,9 +87,6 @@ final class PrestashopOrderCarrier
         return $this->shippingCostTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setShippingCostTaxExcl(?float $shippingCostTaxExcl): self
     {
         $this->shippingCostTaxExcl = $shippingCostTaxExcl;
@@ -117,9 +99,6 @@ final class PrestashopOrderCarrier
         return $this->shippingCostTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setShippingCostTaxIncl(?float $shippingCostTaxIncl): self
     {
         $this->shippingCostTaxIncl = $shippingCostTaxIncl;
@@ -132,9 +111,6 @@ final class PrestashopOrderCarrier
         return $this->trackingNumber;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setTrackingNumber(?string $trackingNumber): self
     {
         $this->trackingNumber = $trackingNumber;
@@ -147,9 +123,6 @@ final class PrestashopOrderCarrier
         return $this->dateAdd;
     }
 
-    /**
-     * @return PrestashopOrderCarrier
-     */
     public function setDateAdd(?\DateTimeInterface $dateAdd): self
     {
         $this->dateAdd = $dateAdd;

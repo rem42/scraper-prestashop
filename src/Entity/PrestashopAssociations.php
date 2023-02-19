@@ -39,16 +39,16 @@ final class PrestashopAssociations
 
     public function __construct()
     {
-        $this->cartRows            = new ArrayCollection();
-        $this->orderRows           = new ArrayCollection();
-        $this->groups              = new ArrayCollection();
-        $this->categories          = new ArrayCollection();
-        $this->images              = new ArrayCollection();
-        $this->productFeatures     = new ArrayCollection();
-        $this->stockAvailables     = new ArrayCollection();
-        $this->combinations        = new ArrayCollection();
+        $this->cartRows = new ArrayCollection();
+        $this->orderRows = new ArrayCollection();
+        $this->groups = new ArrayCollection();
+        $this->categories = new ArrayCollection();
+        $this->images = new ArrayCollection();
+        $this->productFeatures = new ArrayCollection();
+        $this->stockAvailables = new ArrayCollection();
+        $this->combinations = new ArrayCollection();
         $this->productOptionValues = new ArrayCollection();
-        $this->productBundle       = new ArrayCollection();
+        $this->productBundle = new ArrayCollection();
     }
 
     /**

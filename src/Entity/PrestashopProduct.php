@@ -156,17 +156,17 @@ final class PrestashopProduct
 
     public function __construct()
     {
-        $this->deliveryInStock  = new ArrayCollection();
+        $this->deliveryInStock = new ArrayCollection();
         $this->deliveryOutStock = new ArrayCollection();
-        $this->metaDescription  = new ArrayCollection();
-        $this->metaKeywords     = new ArrayCollection();
-        $this->metaTitle        = new ArrayCollection();
-        $this->linkRewrite      = new ArrayCollection();
-        $this->name             = new ArrayCollection();
-        $this->description      = new ArrayCollection();
+        $this->metaDescription = new ArrayCollection();
+        $this->metaKeywords = new ArrayCollection();
+        $this->metaTitle = new ArrayCollection();
+        $this->linkRewrite = new ArrayCollection();
+        $this->name = new ArrayCollection();
+        $this->description = new ArrayCollection();
         $this->descriptionShort = new ArrayCollection();
-        $this->availableNow     = new ArrayCollection();
-        $this->availableLater   = new ArrayCollection();
+        $this->availableNow = new ArrayCollection();
+        $this->availableLater = new ArrayCollection();
     }
 
     public function getEan13(): ?string

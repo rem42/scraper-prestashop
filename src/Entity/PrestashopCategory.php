@@ -47,12 +47,12 @@ final class PrestashopCategory
 
     public function __construct()
     {
-        $this->name            = new ArrayCollection();
-        $this->linkRewrite     = new ArrayCollection();
-        $this->description     = new ArrayCollection();
-        $this->metaTitle       = new ArrayCollection();
+        $this->name = new ArrayCollection();
+        $this->linkRewrite = new ArrayCollection();
+        $this->description = new ArrayCollection();
+        $this->metaTitle = new ArrayCollection();
         $this->metaDescription = new ArrayCollection();
-        $this->metaKeywords    = new ArrayCollection();
+        $this->metaKeywords = new ArrayCollection();
     }
 
     public function getId(): ?int

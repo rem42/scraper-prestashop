@@ -33,9 +33,6 @@ final class PrestashopOrderRow
         return $this->productEan13;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductEan13(?string $productEan13): self
     {
         $this->productEan13 = $productEan13;
@@ -48,9 +45,6 @@ final class PrestashopOrderRow
         return $this->id;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -63,9 +57,6 @@ final class PrestashopOrderRow
         return $this->productId;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductId(?int $productId): self
     {
         $this->productId = $productId;
@@ -78,9 +69,6 @@ final class PrestashopOrderRow
         return $this->productAttributeId;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductAttributeId(?int $productAttributeId): self
     {
         $this->productAttributeId = $productAttributeId;
@@ -93,9 +81,6 @@ final class PrestashopOrderRow
         return $this->productQuantity;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductQuantity(?int $productQuantity): self
     {
         $this->productQuantity = $productQuantity;
@@ -108,9 +93,6 @@ final class PrestashopOrderRow
         return $this->productName;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductName(?string $productName): self
     {
         $this->productName = $productName;
@@ -123,9 +105,6 @@ final class PrestashopOrderRow
         return $this->productReference;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductReference(?string $productReference): self
     {
         $this->productReference = $productReference;
@@ -138,9 +117,6 @@ final class PrestashopOrderRow
         return $this->productIsbn;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductIsbn(?string $productIsbn): self
     {
         $this->productIsbn = $productIsbn;
@@ -153,9 +129,6 @@ final class PrestashopOrderRow
         return $this->productUpc;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductUpc(?string $productUpc): self
     {
         $this->productUpc = $productUpc;
@@ -168,9 +141,6 @@ final class PrestashopOrderRow
         return $this->productPrice;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setProductPrice(?float $productPrice): self
     {
         $this->productPrice = $productPrice;
@@ -183,9 +153,6 @@ final class PrestashopOrderRow
         return $this->unitPriceTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setUnitPriceTaxIncl(?float $unitPriceTaxIncl): self
     {
         $this->unitPriceTaxIncl = $unitPriceTaxIncl;
@@ -198,9 +165,6 @@ final class PrestashopOrderRow
         return $this->unitPriceTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrderRow
-     */
     public function setUnitPriceTaxExcl(?float $unitPriceTaxExcl): self
     {
         $this->unitPriceTaxExcl = $unitPriceTaxExcl;

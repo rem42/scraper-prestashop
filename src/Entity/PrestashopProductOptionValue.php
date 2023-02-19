@@ -50,9 +50,6 @@ final class PrestashopProductOptionValue
         return $this->id;
     }
 
-    /**
-     * @return PrestashopProductOptionValue
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -65,9 +62,6 @@ final class PrestashopProductOptionValue
         return $this->idAttributeGroup;
     }
 
-    /**
-     * @return PrestashopProductOptionValue
-     */
     public function setIdAttributeGroup(?int $idAttributeGroup): self
     {
         $this->idAttributeGroup = $idAttributeGroup;
@@ -80,9 +74,6 @@ final class PrestashopProductOptionValue
         return $this->color;
     }
 
-    /**
-     * @return PrestashopProductOptionValue
-     */
     public function setColor(?string $color): self
     {
         $this->color = $color;
@@ -95,9 +86,6 @@ final class PrestashopProductOptionValue
         return $this->position;
     }
 
-    /**
-     * @return PrestashopProductOptionValue
-     */
     public function setPosition(?int $position): self
     {
         $this->position = $position;

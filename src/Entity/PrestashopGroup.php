@@ -11,9 +11,6 @@ final class PrestashopGroup
         return $this->id;
     }
 
-    /**
-     * @return PrestashopGroup
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;

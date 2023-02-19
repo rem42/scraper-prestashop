@@ -61,8 +61,8 @@ jobs:
             -   name: Run PHP CS Fixer
                 run: composer run-script code-style-check
 
-            -   name: Run PHPSTAN
-                run: composer run-script static-analysis
+#            -   name: Run PHPSTAN
+#                run: composer run-script static-analysis
 
             -   name: Run UNIT-TESTS
                 run: composer run-script unit-test

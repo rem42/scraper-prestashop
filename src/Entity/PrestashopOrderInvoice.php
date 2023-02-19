@@ -47,9 +47,6 @@ final class PrestashopOrderInvoice
         return $this->id;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -62,9 +59,6 @@ final class PrestashopOrderInvoice
         return $this->idOrder;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setIdOrder(?int $idOrder): self
     {
         $this->idOrder = $idOrder;
@@ -77,9 +71,6 @@ final class PrestashopOrderInvoice
         return $this->number;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setNumber(?int $number): self
     {
         $this->number = $number;
@@ -92,9 +83,6 @@ final class PrestashopOrderInvoice
         return $this->deliveryNumber;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setDeliveryNumber(?int $deliveryNumber): self
     {
         $this->deliveryNumber = $deliveryNumber;
@@ -107,9 +95,6 @@ final class PrestashopOrderInvoice
         return $this->deliveryDate;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setDeliveryDate(?\DateTimeInterface $deliveryDate): self
     {
         $this->deliveryDate = $deliveryDate;
@@ -122,9 +107,6 @@ final class PrestashopOrderInvoice
         return $this->totalDiscountTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalDiscountTaxExcl(?float $totalDiscountTaxExcl): self
     {
         $this->totalDiscountTaxExcl = $totalDiscountTaxExcl;
@@ -137,9 +119,6 @@ final class PrestashopOrderInvoice
         return $this->totalDiscountTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalDiscountTaxIncl(?float $totalDiscountTaxIncl): self
     {
         $this->totalDiscountTaxIncl = $totalDiscountTaxIncl;
@@ -152,9 +131,6 @@ final class PrestashopOrderInvoice
         return $this->totalPaidTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalPaidTaxExcl(?float $totalPaidTaxExcl): self
     {
         $this->totalPaidTaxExcl = $totalPaidTaxExcl;
@@ -167,9 +143,6 @@ final class PrestashopOrderInvoice
         return $this->totalPaidTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalPaidTaxIncl(?float $totalPaidTaxIncl): self
     {
         $this->totalPaidTaxIncl = $totalPaidTaxIncl;
@@ -182,9 +155,6 @@ final class PrestashopOrderInvoice
         return $this->totalProducts;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalProducts(?float $totalProducts): self
     {
         $this->totalProducts = $totalProducts;
@@ -197,9 +167,6 @@ final class PrestashopOrderInvoice
         return $this->totalProductsWt;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalProductsWt(?float $totalProductsWt): self
     {
         $this->totalProductsWt = $totalProductsWt;
@@ -212,9 +179,6 @@ final class PrestashopOrderInvoice
         return $this->totalShippingTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalShippingTaxExcl(?float $totalShippingTaxExcl): self
     {
         $this->totalShippingTaxExcl = $totalShippingTaxExcl;
@@ -227,9 +191,6 @@ final class PrestashopOrderInvoice
         return $this->totalShippingTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalShippingTaxIncl(?float $totalShippingTaxIncl): self
     {
         $this->totalShippingTaxIncl = $totalShippingTaxIncl;
@@ -242,9 +203,6 @@ final class PrestashopOrderInvoice
         return $this->shippingTaxComputationMethod;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setShippingTaxComputationMethod(?int $shippingTaxComputationMethod): self
     {
         $this->shippingTaxComputationMethod = $shippingTaxComputationMethod;
@@ -257,9 +215,6 @@ final class PrestashopOrderInvoice
         return $this->totalWrappingTaxExcl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalWrappingTaxExcl(?float $totalWrappingTaxExcl): self
     {
         $this->totalWrappingTaxExcl = $totalWrappingTaxExcl;
@@ -272,9 +227,6 @@ final class PrestashopOrderInvoice
         return $this->totalWrappingTaxIncl;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setTotalWrappingTaxIncl(?float $totalWrappingTaxIncl): self
     {
         $this->totalWrappingTaxIncl = $totalWrappingTaxIncl;
@@ -287,9 +239,6 @@ final class PrestashopOrderInvoice
         return $this->shopAddress;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setShopAddress(?string $shopAddress): self
     {
         $this->shopAddress = $shopAddress;
@@ -302,9 +251,6 @@ final class PrestashopOrderInvoice
         return $this->note;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setNote(?string $note): self
     {
         $this->note = $note;
@@ -317,9 +263,6 @@ final class PrestashopOrderInvoice
         return $this->dateAdd;
     }
 
-    /**
-     * @return PrestashopOrderInvoice
-     */
     public function setDateAdd(?\DateTimeInterface $dateAdd): self
     {
         $this->dateAdd = $dateAdd;

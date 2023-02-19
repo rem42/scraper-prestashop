@@ -43,7 +43,7 @@ final class PrestashopOrderState
 
     public function __construct()
     {
-        $this->name     = new ArrayCollection();
+        $this->name = new ArrayCollection();
         $this->template = new ArrayCollection();
     }
 
@@ -96,9 +96,6 @@ final class PrestashopOrderState
         return $this->id;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setId(?int $id): self
     {
         $this->id = $id;
@@ -111,9 +108,6 @@ final class PrestashopOrderState
         return $this->unremovable;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setUnremovable(?bool $unremovable): self
     {
         $this->unremovable = $unremovable;
@@ -126,9 +120,6 @@ final class PrestashopOrderState
         return $this->delivery;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setDelivery(?bool $delivery): self
     {
         $this->delivery = $delivery;
@@ -141,9 +132,6 @@ final class PrestashopOrderState
         return $this->hidden;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setHidden(?bool $hidden): self
     {
         $this->hidden = $hidden;
@@ -156,9 +144,6 @@ final class PrestashopOrderState
         return $this->sendEmail;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setSendEmail(?bool $sendEmail): self
     {
         $this->sendEmail = $sendEmail;
@@ -171,9 +156,6 @@ final class PrestashopOrderState
         return $this->moduleName;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setModuleName(?string $moduleName): self
     {
         $this->moduleName = $moduleName;
@@ -186,9 +168,6 @@ final class PrestashopOrderState
         return $this->invoice;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setInvoice(?bool $invoice): self
     {
         $this->invoice = $invoice;
@@ -201,9 +180,6 @@ final class PrestashopOrderState
         return $this->color;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setColor(?string $color): self
     {
         $this->color = $color;
@@ -216,9 +192,6 @@ final class PrestashopOrderState
         return $this->logable;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setLogable(?bool $logable): self
     {
         $this->logable = $logable;
@@ -231,9 +204,6 @@ final class PrestashopOrderState
         return $this->shipped;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setShipped(?bool $shipped): self
     {
         $this->shipped = $shipped;
@@ -246,9 +216,6 @@ final class PrestashopOrderState
         return $this->paid;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setPaid(?bool $paid): self
     {
         $this->paid = $paid;
@@ -261,9 +228,6 @@ final class PrestashopOrderState
         return $this->pdfDelivery;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setPdfDelivery(?bool $pdfDelivery): self
     {
         $this->pdfDelivery = $pdfDelivery;
@@ -276,9 +240,6 @@ final class PrestashopOrderState
         return $this->pdfInvoice;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setPdfInvoice(?bool $pdfInvoice): self
     {
         $this->pdfInvoice = $pdfInvoice;
@@ -291,9 +252,6 @@ final class PrestashopOrderState
         return $this->deleted;
     }
 
-    /**
-     * @return PrestashopOrderState
-     */
     public function setDeleted(?bool $deleted): self
     {
         $this->deleted = $deleted;

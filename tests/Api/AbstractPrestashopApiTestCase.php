@@ -3,7 +3,7 @@
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
 use PHPUnit\Framework\TestCase;
-use Scraper\Scraper\Annotation\Scraper;
+use Scraper\Scraper\Attribute\Scraper;
 use Scraper\ScraperPrestashop\Api\PrestashopGetApi;
 use Scraper\ScraperPrestashop\Request\PrestashopGetRequest;
 use Symfony\Contracts\HttpClient\ResponseInterface;

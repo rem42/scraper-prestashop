@@ -25,7 +25,7 @@ final class PrestashopProductOption
 
     public function __construct()
     {
-        $this->name       = new ArrayCollection();
+        $this->name = new ArrayCollection();
         $this->publicName = new ArrayCollection();
     }
 
