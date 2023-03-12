@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -22,10 +22,10 @@ class PrestashopGetOrderCarrierApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopOrderCarrier::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(1, $result->getIdOrder());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(1, $result->idOrder);
 
-        $this->assertInstanceOf(\DateTimeInterface::class, $result->getDateAdd());
+        $this->assertInstanceOf(\DateTimeInterface::class, $result->dateAdd);
     }
 
     public function testList(): void
@@ -39,7 +39,7 @@ class PrestashopGetOrderCarrierApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopOrderCarriers::class, $result);
-        $this->assertCount(2, $result->getOrderCarriers());
-        $this->assertInstanceOf(PrestashopOrderCarrier::class, $result->getOrderCarriers()->first());
+        $this->assertCount(2, $result->orderCarriers);
+        $this->assertInstanceOf(PrestashopOrderCarrier::class, $result->orderCarriers[0]);
     }
 }

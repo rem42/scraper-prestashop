@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -22,8 +22,8 @@ class PrestashopGetStateApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopState::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals('AA', $result->getName());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals('AA', $result->name);
     }
 
     public function testList(): void
@@ -37,7 +37,7 @@ class PrestashopGetStateApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopStates::class, $result);
-        $this->assertCount(2, $result->getStates());
-        $this->assertInstanceOf(PrestashopState::class, $result->getStates()->first());
+        $this->assertCount(2, $result->states);
+        $this->assertInstanceOf(PrestashopState::class, $result->states[0]);
     }
 }

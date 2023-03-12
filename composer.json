@@ -8,42 +8,30 @@
     "homepage": "https://remy.ovh"
   }],
   "require" : {
-    "php": "^7.4|^8.0",
-    "doctrine/collections": "^1.6",
-    "symfony/serializer-pack": "^1.0",
-    "rem42/scraper": "^2.0",
-    "ext-json": "*"
+    "php": "^8.1",
+    "ext-json": "*",
+    "rem42/scraper": "^3.0",
+    "symfony/serializer-pack": "^1.1"
   },
   "require-dev": {
-    "rem42/php-cs-fixer-config": "^3.1",
-    "phpstan/phpstan": "^0.12",
-    "phpunit/phpunit": "^9.5",
-    "php-coveralls/php-coveralls": "^2.5"
+    "rem42/php-cs-fixer-config": "^3.4",
+    "phpstan/phpstan": "^1.8",
+    "phpunit/phpunit": "^10.0"
   },
   "autoload": {
-    "psr-0": {
-      "Scraper\\ScraperPrestashop\\": "src/"
-    },
     "psr-4": {
       "Scraper\\ScraperPrestashop\\": "src/"
     }
   },
   "autoload-dev": {
-    "psr-0": {
-      "Scraper\\ScraperPrestashop\\Tests\\": "tests/"
-    },
     "psr-4": {
       "Scraper\\ScraperPrestashop\\Tests\\": "tests/"
     }
   },
-  "config": {
-    "bin-dir": "bin/"
-  },
   "scripts": {
-    "static-analysis": "./bin/phpstan analyse src --level=max --no-progress -vvv",
-    "code-style-check": "./bin/php-cs-fixer fix --dry-run --verbose",
-    "code-style-fix": "./bin/php-cs-fixer fix",
-    "unit-test": "./bin/phpunit"
-  },
-  "sort-packages": true
+    "static-analysis": "./vendor/bin/phpstan analyse src --level=max --no-progress -vvv",
+    "code-style-check": "./vendor/bin/php-cs-fixer fix --dry-run --verbose",
+    "code-style-fix": "./vendor/bin/php-cs-fixer fix --using-cache=no",
+    "unit-test": "./vendor/bin/phpunit"
+  }
 }

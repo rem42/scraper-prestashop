@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,11 +23,11 @@ class PrestashopGetProductFeatureValueApiTest extends AbstractPrestashopApiTestC
 
         $this->assertInstanceOf(PrestashopProductFeatureValue::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(1, $result->getIdFeature());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(1, $result->idFeature);
 
-        $this->assertCount(1, $result->getValue());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getValue()->first());
+        $this->assertCount(1, $result->value);
+        $this->assertInstanceOf(PrestashopItem::class, $result->value[0]);
     }
 
     public function testMultilang(): void
@@ -42,11 +42,11 @@ class PrestashopGetProductFeatureValueApiTest extends AbstractPrestashopApiTestC
 
         $this->assertInstanceOf(PrestashopProductFeatureValue::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(1, $result->getIdFeature());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(1, $result->idFeature);
 
-        $this->assertCount(2, $result->getValue());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getValue()->first());
+        $this->assertCount(2, $result->value);
+        $this->assertInstanceOf(PrestashopItem::class, $result->value[0]);
     }
 
     public function testList(): void
@@ -60,7 +60,7 @@ class PrestashopGetProductFeatureValueApiTest extends AbstractPrestashopApiTestC
         );
 
         $this->assertInstanceOf(PrestashopProductFeatureValues::class, $result);
-        $this->assertCount(2, $result->getProductFeatureValues());
-        $this->assertInstanceOf(PrestashopProductFeatureValue::class, $result->getProductFeatureValues()->first());
+        $this->assertCount(2, $result->productFeatureValues);
+        $this->assertInstanceOf(PrestashopProductFeatureValue::class, $result->productFeatureValues[0]);
     }
 }

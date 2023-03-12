@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -25,16 +25,16 @@ class PrestashopGetProductOptionApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopProductOption::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(1, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(1, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(1, $result->getPublicName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getPublicName()->first());
+        $this->assertCount(1, $result->publicName);
+        $this->assertInstanceOf(PrestashopItem::class, $result->publicName[0]);
 
-        $this->assertCount(4, $result->getAssociations()->getProductOptionValues());
-        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->getAssociations()->getProductOptionValues()->first());
+        $this->assertCount(4, $result->associations->productOptionValues);
+        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->associations->productOptionValues[0]);
     }
 
     public function testMultilang(): void
@@ -49,18 +49,18 @@ class PrestashopGetProductOptionApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopProductOption::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(2, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(2, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(2, $result->getPublicName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getPublicName()->first());
+        $this->assertCount(2, $result->publicName);
+        $this->assertInstanceOf(PrestashopItem::class, $result->publicName[0]);
 
-        $this->assertInstanceOf(PrestashopAssociations::class, $result->getAssociations());
+        $this->assertInstanceOf(PrestashopAssociations::class, $result->associations);
 
-        $this->assertCount(4, $result->getAssociations()->getProductOptionValues());
-        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->getAssociations()->getProductOptionValues()->first());
+        $this->assertCount(4, $result->associations->productOptionValues);
+        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->associations->productOptionValues[0]);
     }
 
     public function testList(): void
@@ -74,7 +74,7 @@ class PrestashopGetProductOptionApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopProductOptions::class, $result);
-        $this->assertCount(2, $result->getProductOptions());
-        $this->assertInstanceOf(PrestashopProductOption::class, $result->getProductOptions()->first());
+        $this->assertCount(2, $result->productOptions);
+        $this->assertInstanceOf(PrestashopProductOption::class, $result->productOptions[0]);
     }
 }
