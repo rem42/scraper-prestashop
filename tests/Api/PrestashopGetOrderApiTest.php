@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -24,15 +24,15 @@ class PrestashopGetOrderApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopOrder::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(1, $result->getIdCart());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(1, $result->idCart);
 
-        $this->assertInstanceOf(\DateTimeInterface::class, $result->getDateAdd());
+        $this->assertInstanceOf(\DateTimeInterface::class, $result->dateAdd);
 
-        $this->assertInstanceOf(PrestashopAssociations::class, $result->getAssociations());
+        $this->assertInstanceOf(PrestashopAssociations::class, $result->associations);
 
-        $this->assertCount(2, $result->getAssociations()->getOrderRows());
-        $this->assertInstanceOf(PrestashopOrderRow::class, $result->getAssociations()->getOrderRows()->first());
+        $this->assertCount(2, $result->associations->orderRows);
+        $this->assertInstanceOf(PrestashopOrderRow::class, $result->associations->orderRows[0]);
     }
 
     public function testList(): void
@@ -46,7 +46,7 @@ class PrestashopGetOrderApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopOrders::class, $result);
-        $this->assertCount(2, $result->getOrders());
-        $this->assertInstanceOf(PrestashopOrder::class, $result->getOrders()->first());
+        $this->assertCount(2, $result->orders);
+        $this->assertInstanceOf(PrestashopOrder::class, $result->orders[0]);
     }
 }

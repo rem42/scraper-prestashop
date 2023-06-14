@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -23,26 +23,26 @@ class PrestashopGetCategoryApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCategory::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(0, $result->getIdParent());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(0, $result->idParent);
 
-        $this->assertCount(1, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(1, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(1, $result->getLinkRewrite());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getLinkRewrite()->first());
+        $this->assertCount(1, $result->linkRewrite);
+        $this->assertInstanceOf(PrestashopItem::class, $result->linkRewrite[0]);
 
-        $this->assertCount(1, $result->getDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDescription()->first());
+        $this->assertCount(1, $result->description);
+        $this->assertInstanceOf(PrestashopItem::class, $result->description[0]);
 
-        $this->assertCount(1, $result->getMetaTitle());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaTitle()->first());
+        $this->assertCount(1, $result->metaTitle);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaTitle[0]);
 
-        $this->assertCount(1, $result->getMetaDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaDescription()->first());
+        $this->assertCount(1, $result->metaDescription);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaDescription[0]);
 
-        $this->assertCount(1, $result->getMetaKeywords());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaKeywords()->first());
+        $this->assertCount(1, $result->metaKeywords);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaKeywords[0]);
     }
 
     public function testMulitlang(): void
@@ -57,26 +57,26 @@ class PrestashopGetCategoryApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopCategory::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(0, $result->getIdParent());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(0, $result->idParent);
 
-        $this->assertCount(2, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(2, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(2, $result->getLinkRewrite());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getLinkRewrite()->first());
+        $this->assertCount(2, $result->linkRewrite);
+        $this->assertInstanceOf(PrestashopItem::class, $result->linkRewrite[0]);
 
-        $this->assertCount(2, $result->getDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDescription()->first());
+        $this->assertCount(2, $result->description);
+        $this->assertInstanceOf(PrestashopItem::class, $result->description[0]);
 
-        $this->assertCount(2, $result->getMetaTitle());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaTitle()->first());
+        $this->assertCount(2, $result->metaTitle);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaTitle[0]);
 
-        $this->assertCount(2, $result->getMetaDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaDescription()->first());
+        $this->assertCount(2, $result->metaDescription);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaDescription[0]);
 
-        $this->assertCount(2, $result->getMetaKeywords());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaKeywords()->first());
+        $this->assertCount(2, $result->metaKeywords);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaKeywords[0]);
     }
 
     public function testList(): void
@@ -90,7 +90,7 @@ class PrestashopGetCategoryApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopCategories::class, $result);
-        $this->assertCount(2, $result->getCategories());
-        $this->assertInstanceOf(PrestashopCategory::class, $result->getCategories()->first());
+        $this->assertCount(2, $result->categories);
+        $this->assertInstanceOf(PrestashopCategory::class, $result->categories[0]);
     }
 }

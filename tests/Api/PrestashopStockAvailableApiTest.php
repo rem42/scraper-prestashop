@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -28,8 +28,8 @@ class PrestashopStockAvailableApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopStockAvailable::class, $result);
 
-        $this->assertEquals(1, $result->getId());
-        $this->assertEquals(42, $result->getQuantity());
+        $this->assertEquals(1, $result->id);
+        $this->assertEquals(42, $result->quantity);
     }
 
     public function testList(): void
@@ -43,17 +43,19 @@ class PrestashopStockAvailableApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopStockAvailables::class, $result);
-        $this->assertCount(2, $result->getStockAvailables());
-        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getStockAvailables()->first());
+        $this->assertCount(2, $result->stockAvailables);
+        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->stockAvailables[0]);
     }
 
     public function testPut(): void
     {
         $responseInterface = $this->createMock(ResponseInterface::class);
         $responseInterface
-            ->method('getStatusCode')->willReturn(200);
+            ->method('getStatusCode')->willReturn(200)
+        ;
         $responseInterface
-            ->method('getContent')->willReturn($this->loadFixture('stock_available.json'));
+            ->method('getContent')->willReturn($this->loadFixture('stock_available.json'))
+        ;
 
         $httpClientInterface = $this->createMock(HttpClientInterface::class);
         $httpClientInterface
@@ -83,7 +85,7 @@ class PrestashopStockAvailableApiTest extends AbstractPrestashopApiTestCase
             ->setIdProduct(6)
             ->setIdProductAttribute(0)
             ->setQuantity(42)
-            ->setDependsOnStock(false)
+            ->setDependsOnStock(0)
             ->setOutOfStock(2)
             ->setIdShop(1)
             ->setIdShopGroup(0)

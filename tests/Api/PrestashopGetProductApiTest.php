@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -31,63 +31,63 @@ class PrestashopGetProductApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopProduct::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(1, $result->getDeliveryInStock());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDeliveryInStock()->first());
+        $this->assertCount(1, $result->deliveryInStock);
+        $this->assertInstanceOf(PrestashopItem::class, $result->deliveryInStock[0]);
 
-        $this->assertCount(1, $result->getDeliveryOutStock());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDeliveryOutStock()->first());
+        $this->assertCount(1, $result->deliveryOutStock);
+        $this->assertInstanceOf(PrestashopItem::class, $result->deliveryOutStock[0]);
 
-        $this->assertCount(1, $result->getMetaDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaDescription()->first());
+        $this->assertCount(1, $result->metaDescription);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaDescription[0]);
 
-        $this->assertCount(1, $result->getMetaKeywords());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaKeywords()->first());
+        $this->assertCount(1, $result->metaKeywords);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaKeywords[0]);
 
-        $this->assertCount(1, $result->getMetaTitle());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaTitle()->first());
+        $this->assertCount(1, $result->metaTitle);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaTitle[0]);
 
-        $this->assertCount(1, $result->getLinkRewrite());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getLinkRewrite()->first());
+        $this->assertCount(1, $result->linkRewrite);
+        $this->assertInstanceOf(PrestashopItem::class, $result->linkRewrite[0]);
 
-        $this->assertCount(1, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(1, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(1, $result->getDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDescription()->first());
+        $this->assertCount(1, $result->description);
+        $this->assertInstanceOf(PrestashopItem::class, $result->description[0]);
 
-        $this->assertCount(1, $result->getDescriptionShort());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDescriptionShort()->first());
+        $this->assertCount(1, $result->descriptionShort);
+        $this->assertInstanceOf(PrestashopItem::class, $result->descriptionShort[0]);
 
-        $this->assertCount(1, $result->getAvailableNow());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getAvailableNow()->first());
+        $this->assertCount(1, $result->availableNow);
+        $this->assertInstanceOf(PrestashopItem::class, $result->availableNow[0]);
 
-        $this->assertCount(1, $result->getAvailableLater());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getAvailableLater()->first());
+        $this->assertCount(1, $result->availableLater);
+        $this->assertInstanceOf(PrestashopItem::class, $result->availableLater[0]);
 
-        $this->assertInstanceOf(PrestashopAssociations::class, $result->getAssociations());
+        $this->assertInstanceOf(PrestashopAssociations::class, $result->associations);
 
-        $this->assertCount(3, $result->getAssociations()->getCategories());
-        $this->assertInstanceOf(PrestashopCategory::class, $result->getAssociations()->getCategories()->first());
+        $this->assertCount(3, $result->associations->categories);
+        $this->assertInstanceOf(PrestashopCategory::class, $result->associations->categories[0]);
 
-        $this->assertCount(2, $result->getAssociations()->getImages());
-        $this->assertInstanceOf(PrestashopImage::class, $result->getAssociations()->getImages()->first());
+        $this->assertCount(2, $result->associations->images);
+        $this->assertInstanceOf(PrestashopImage::class, $result->associations->images[0]);
 
-        $this->assertCount(8, $result->getAssociations()->getCombinations());
-        $this->assertInstanceOf(PrestashopCombination::class, $result->getAssociations()->getCombinations()->first());
+        $this->assertCount(8, $result->associations->combinations);
+        $this->assertInstanceOf(PrestashopCombination::class, $result->associations->combinations[0]);
 
-        $this->assertCount(6, $result->getAssociations()->getProductOptionValues());
-        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->getAssociations()->getProductOptionValues()->first());
+        $this->assertCount(6, $result->associations->productOptionValues);
+        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->associations->productOptionValues[0]);
 
-        $this->assertCount(2, $result->getAssociations()->getProductFeatures());
-        $this->assertInstanceOf(PrestashopProductFeature::class, $result->getAssociations()->getProductFeatures()->first());
+        $this->assertCount(2, $result->associations->productFeatures);
+        $this->assertInstanceOf(PrestashopProductFeature::class, $result->associations->productFeatures[0]);
 
-        $this->assertCount(9, $result->getAssociations()->getStockAvailables());
-        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getAssociations()->getStockAvailables()->first());
+        $this->assertCount(9, $result->associations->stockAvailables);
+        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->associations->stockAvailables[0]);
 
-        $this->assertCount(2, $result->getAssociations()->getProductBundle());
-        $this->assertInstanceOf(PrestashopProductBundle::class, $result->getAssociations()->getProductBundle()->first());
+        $this->assertCount(2, $result->associations->productBundle);
+        $this->assertInstanceOf(PrestashopProductBundle::class, $result->associations->productBundle[0]);
     }
 
     public function testMultilang(): void
@@ -102,63 +102,63 @@ class PrestashopGetProductApiTest extends AbstractPrestashopApiTestCase
 
         $this->assertInstanceOf(PrestashopProduct::class, $result);
 
-        $this->assertEquals(1, $result->getId());
+        $this->assertEquals(1, $result->id);
 
-        $this->assertCount(2, $result->getDeliveryInStock());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDeliveryInStock()->first());
+        $this->assertCount(2, $result->deliveryInStock);
+        $this->assertInstanceOf(PrestashopItem::class, $result->deliveryInStock[0]);
 
-        $this->assertCount(2, $result->getDeliveryOutStock());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDeliveryOutStock()->first());
+        $this->assertCount(2, $result->deliveryOutStock);
+        $this->assertInstanceOf(PrestashopItem::class, $result->deliveryOutStock[0]);
 
-        $this->assertCount(2, $result->getMetaDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaDescription()->first());
+        $this->assertCount(2, $result->metaDescription);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaDescription[0]);
 
-        $this->assertCount(2, $result->getMetaKeywords());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaKeywords()->first());
+        $this->assertCount(2, $result->metaKeywords);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaKeywords[0]);
 
-        $this->assertCount(2, $result->getMetaTitle());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getMetaTitle()->first());
+        $this->assertCount(2, $result->metaTitle);
+        $this->assertInstanceOf(PrestashopItem::class, $result->metaTitle[0]);
 
-        $this->assertCount(2, $result->getLinkRewrite());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getLinkRewrite()->first());
+        $this->assertCount(2, $result->linkRewrite);
+        $this->assertInstanceOf(PrestashopItem::class, $result->linkRewrite[0]);
 
-        $this->assertCount(2, $result->getName());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getName()->first());
+        $this->assertCount(2, $result->name);
+        $this->assertInstanceOf(PrestashopItem::class, $result->name[0]);
 
-        $this->assertCount(2, $result->getDescription());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDescription()->first());
+        $this->assertCount(2, $result->description);
+        $this->assertInstanceOf(PrestashopItem::class, $result->description[0]);
 
-        $this->assertCount(2, $result->getDescriptionShort());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getDescriptionShort()->first());
+        $this->assertCount(2, $result->descriptionShort);
+        $this->assertInstanceOf(PrestashopItem::class, $result->descriptionShort[0]);
 
-        $this->assertCount(2, $result->getAvailableNow());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getAvailableNow()->first());
+        $this->assertCount(2, $result->availableNow);
+        $this->assertInstanceOf(PrestashopItem::class, $result->availableNow[0]);
 
-        $this->assertCount(2, $result->getAvailableLater());
-        $this->assertInstanceOf(PrestashopItem::class, $result->getAvailableLater()->first());
+        $this->assertCount(2, $result->availableLater);
+        $this->assertInstanceOf(PrestashopItem::class, $result->availableLater[0]);
 
-        $this->assertInstanceOf(PrestashopAssociations::class, $result->getAssociations());
+        $this->assertInstanceOf(PrestashopAssociations::class, $result->associations);
 
-        $this->assertCount(3, $result->getAssociations()->getCategories());
-        $this->assertInstanceOf(PrestashopCategory::class, $result->getAssociations()->getCategories()->first());
+        $this->assertCount(3, $result->associations->categories);
+        $this->assertInstanceOf(PrestashopCategory::class, $result->associations->categories[0]);
 
-        $this->assertCount(2, $result->getAssociations()->getImages());
-        $this->assertInstanceOf(PrestashopImage::class, $result->getAssociations()->getImages()->first());
+        $this->assertCount(2, $result->associations->images);
+        $this->assertInstanceOf(PrestashopImage::class, $result->associations->images[0]);
 
-        $this->assertCount(8, $result->getAssociations()->getCombinations());
-        $this->assertInstanceOf(PrestashopCombination::class, $result->getAssociations()->getCombinations()->first());
+        $this->assertCount(8, $result->associations->combinations);
+        $this->assertInstanceOf(PrestashopCombination::class, $result->associations->combinations[0]);
 
-        $this->assertCount(6, $result->getAssociations()->getProductOptionValues());
-        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->getAssociations()->getProductOptionValues()->first());
+        $this->assertCount(6, $result->associations->productOptionValues);
+        $this->assertInstanceOf(PrestashopProductOptionValue::class, $result->associations->productOptionValues[0]);
 
-        $this->assertCount(2, $result->getAssociations()->getProductFeatures());
-        $this->assertInstanceOf(PrestashopProductFeature::class, $result->getAssociations()->getProductFeatures()->first());
+        $this->assertCount(2, $result->associations->productFeatures);
+        $this->assertInstanceOf(PrestashopProductFeature::class, $result->associations->productFeatures[0]);
 
-        $this->assertCount(9, $result->getAssociations()->getStockAvailables());
-        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->getAssociations()->getStockAvailables()->first());
+        $this->assertCount(9, $result->associations->stockAvailables);
+        $this->assertInstanceOf(PrestashopStockAvailable::class, $result->associations->stockAvailables[0]);
 
-        $this->assertCount(2, $result->getAssociations()->getProductBundle());
-        $this->assertInstanceOf(PrestashopProductBundle::class, $result->getAssociations()->getProductBundle()->first());
+        $this->assertCount(2, $result->associations->productBundle);
+        $this->assertInstanceOf(PrestashopProductBundle::class, $result->associations->productBundle[0]);
     }
 
     public function testList(): void
@@ -172,7 +172,7 @@ class PrestashopGetProductApiTest extends AbstractPrestashopApiTestCase
         );
 
         $this->assertInstanceOf(PrestashopProducts::class, $result);
-        $this->assertCount(2, $result->getProducts());
-        $this->assertInstanceOf(PrestashopProduct::class, $result->getProducts()->first());
+        $this->assertCount(2, $result->products);
+        $this->assertInstanceOf(PrestashopProduct::class, $result->products[0]);
     }
 }
