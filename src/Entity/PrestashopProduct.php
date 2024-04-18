@@ -4,7 +4,7 @@ namespace Scraper\ScraperPrestashop\Entity;
 
 final class PrestashopProduct
 {
-    public ?string $ean13;
+    public ?string $ean13 = null;
     /** @var array<int, PrestashopItem> */
     public array $deliveryInStock = [];
     /** @var array<int, PrestashopItem> */
