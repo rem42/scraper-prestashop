@@ -43,7 +43,7 @@ class PrestashopGetRequest extends PrestashopRequest
         return $this;
     }
 
-    public function setLimit(?int $limit, int $offset = null): self
+    public function setLimit(?int $limit, ?int $offset = null): self
     {
         if ($offset) {
             $this->limit = $offset . ',' . $limit;

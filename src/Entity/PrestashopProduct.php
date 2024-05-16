@@ -29,8 +29,8 @@ final class PrestashopProduct
     public array $availableLater = [];
     public PrestashopAssociations $associations;
     public ?int $id = null;
-    public ?string $idManufacturer = null;
-    public ?string $idSupplier = null;
+    public null|int|string $idManufacturer = null;
+    public null|int|string $idSupplier = null;
     public ?int $idCategoryDefault = null;
     public ?string $new = null;
     public ?int $cacheDefaultAttribute = null;

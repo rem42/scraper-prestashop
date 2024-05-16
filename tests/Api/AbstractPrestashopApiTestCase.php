@@ -16,7 +16,7 @@ abstract class AbstractPrestashopApiTestCase extends TestCase
     {
         parent::setUp();
 
-        static::$fixturesDir = \dirname(__DIR__) . '/fixtures/';
+        static::$fixturesDir = __DIR__ . '/../fixtures/';
     }
 
     protected function fixturePath(string $filename): string

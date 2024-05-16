@@ -12,7 +12,7 @@ class PrestashopItemNormalizer implements DenormalizerInterface
      *
      * @return PrestashopItem|array<PrestashopItem>
      */
-    public function denormalize($data, string $type, string $format = null, array $context = [])
+    public function denormalize($data, string $type, ?string $format = null, array $context = [])
     {
         if (!\is_string($data)) {
             return [];
@@ -24,7 +24,7 @@ class PrestashopItemNormalizer implements DenormalizerInterface
         return PrestashopItem::class === $type ? $prestashopItem : [$prestashopItem];
     }
 
-    public function supportsDenormalization($data, string $type, string $format = null): bool
+    public function supportsDenormalization($data, string $type, ?string $format = null): bool
     {
         return !\is_array($data)
             && (PrestashopItem::class === $type || PrestashopItem::class . '[]' === $type);

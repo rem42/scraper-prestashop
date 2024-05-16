@@ -18,7 +18,7 @@ class PrestashopDeliveryPointNormalizer implements DenormalizerInterface
     /**
      * @param array<string, string> $context
      */
-    public function denormalize($data, string $type, string $format = null, array $context = [])
+    public function denormalize($data, string $type, ?string $format = null, array $context = [])
     {
         if (!\is_string($data)) {
             return $data;
@@ -30,7 +30,7 @@ class PrestashopDeliveryPointNormalizer implements DenormalizerInterface
     /**
      * @param array<string, string> $context
      */
-    public function supportsDenormalization($data, string $type, string $format = null, array $context = []): bool
+    public function supportsDenormalization($data, string $type, ?string $format = null, array $context = []): bool
     {
         return PrestashopTntOfficielDeliveryPoint::class === $type;
     }
