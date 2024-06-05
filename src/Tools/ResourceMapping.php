@@ -2,6 +2,10 @@
 
 namespace Scraper\ScraperPrestashop\Tools;
 
+use Scraper\ScraperPrestashop\Entity\CadoMaestro\PrestashopPackage;
+use Scraper\ScraperPrestashop\Entity\CadoMaestro\PrestashopPackages;
+use Scraper\ScraperPrestashop\Entity\CadoMaestro\PrestashopPackageType;
+use Scraper\ScraperPrestashop\Entity\CadoMaestro\PrestashopPackageTypes;
 use Scraper\ScraperPrestashop\Entity\PrestashopAddress;
 use Scraper\ScraperPrestashop\Entity\PrestashopAddresses;
 use Scraper\ScraperPrestashop\Entity\PrestashopCarrier;
@@ -429,6 +433,16 @@ class ResourceMapping
         ],
         'rem42_webservices/orders/invoices' => [
             'isFile' => true,
+        ],
+        'package_types' => [
+            'list' => PrestashopPackageTypes::class,
+            'one' => PrestashopPackageType::class,
+            'singular' => 'package_type',
+        ],
+        'packages' => [
+            'list' => PrestashopPackages::class,
+            'one' => PrestashopPackage::class,
+            'singular' => 'package',
         ],
     ];
 

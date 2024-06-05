@@ -1,0 +1,30 @@
+{
+  "package": {
+    "id": 1,
+    "id_package_type": "1",
+    "name": [
+      {
+        "id": "1",
+        "value": "Papier ananas jaune"
+      },
+      {
+        "id": "8",
+        "value": "Ananas - Ananas"
+      }
+    ],
+    "picto": [
+      {
+        "id": "1",
+        "value": "/img/nq_packaging/pictos/package1-ananas.jpg"
+      },
+      {
+        "id": "8",
+        "value": "/img/nq_packaging/pictos/package1-Ananas.jpg"
+      }
+    ],
+    "default": "0",
+    "actif": "1",
+    "date_add": "2019-11-13 14:52:10",
+    "date_upd": "2023-05-04 10:49:36"
+  }
+}

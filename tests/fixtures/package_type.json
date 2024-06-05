@@ -1,0 +1,10 @@
+{
+  "package_type": {
+    "id": 1,
+    "name": "Papier cadeau",
+    "sentence": "Choisissez votre papier cadeau",
+    "price": "3.950000",
+    "id_product": "11587",
+    "actif": "0"
+  }
+}
