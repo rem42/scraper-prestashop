@@ -2,20 +2,25 @@
 
 namespace Scraper\ScraperPrestashop\Entity;
 
+use Scraper\ScraperPrestashop\Entity\CadoMaestro\PrestashopPackagingDecoded;
+
 final class PrestashopOrderRow
 {
-    public ?string $productEan13;
     public ?int $id = null;
     public ?int $productId = null;
     public ?int $productAttributeId = null;
     public ?int $productQuantity = null;
     public ?string $productName = null;
     public ?string $productReference = null;
+    public ?string $productEan13 = null;
     public ?string $productIsbn = null;
     public ?string $productUpc = null;
     public ?float $productPrice = null;
     public ?float $unitPriceTaxIncl = null;
     public ?float $unitPriceTaxExcl = null;
+    public ?int $idConfig = null;
+    public ?PrestashopPackagingDecoded $packagingDecoded = null;
+    public ?string $packaging = null;
 
     public function setProductEan13(?string $productEan13): self
     {

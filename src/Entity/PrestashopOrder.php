@@ -51,6 +51,10 @@ final class PrestashopOrder
     public ?int $roundType = null;
     public ?float $conversionRate = null;
     public ?string $reference = null;
+    public ?bool $isSurprise = null;
+    public ?\DateTime $cmDateExpectedDelivery = null;
+    public ?\DateTime $cmDatePreparation = null;
+    public ?int $cmCarrierType = null;
 
     public function setAssociations(PrestashopAssociations $associations): self
     {
@@ -331,6 +335,50 @@ final class PrestashopOrder
     public function setReference(?string $reference): self
     {
         $this->reference = $reference;
+        return $this;
+    }
+
+    public function getIsSurprise(): ?bool
+    {
+        return $this->isSurprise;
+    }
+
+    public function setIsSurprise(?bool $isSurprise): self
+    {
+        $this->isSurprise = $isSurprise;
+        return $this;
+    }
+
+    public function getCmDateExpectedDelivery(): ?\DateTime
+    {
+        return $this->cmDateExpectedDelivery;
+    }
+
+    public function setCmDateExpectedDelivery(?\DateTime $cmDateExpectedDelivery): self
+    {
+        $this->cmDateExpectedDelivery = $cmDateExpectedDelivery;
+        return $this;
+    }
+
+    public function getCmDatePreparation(): ?\DateTime
+    {
+        return $this->cmDatePreparation;
+    }
+
+    public function setCmDatePreparation(?\DateTime $cmDatePreparation): self
+    {
+        $this->cmDatePreparation = $cmDatePreparation;
+        return $this;
+    }
+
+    public function getCmCarrierType(): ?int
+    {
+        return $this->cmCarrierType;
+    }
+
+    public function setCmCarrierType(?int $cmCarrierType): self
+    {
+        $this->cmCarrierType = $cmCarrierType;
         return $this;
     }
 }
