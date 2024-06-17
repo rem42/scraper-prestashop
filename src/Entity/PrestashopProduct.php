@@ -179,13 +179,13 @@ final class PrestashopProduct
         return $this;
     }
 
-    public function setIdManufacturer(?int $idManufacturer): self
+    public function setIdManufacturer(int|string|null $idManufacturer): self
     {
         $this->idManufacturer = $idManufacturer;
         return $this;
     }
 
-    public function setIdSupplier(?int $idSupplier): self
+    public function setIdSupplier(int|string|null $idSupplier): self
     {
         $this->idSupplier = $idSupplier;
         return $this;
