@@ -56,6 +56,11 @@ final class PrestashopOrder
     public ?\DateTime $cmDatePreparation = null;
     public ?int $cmCarrierType = null;
 
+    public function __construct()
+    {
+        $this->associations = new PrestashopAssociations();
+    }
+
     public function setAssociations(PrestashopAssociations $associations): self
     {
         $this->associations = $associations;

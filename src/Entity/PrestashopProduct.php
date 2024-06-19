@@ -84,6 +84,11 @@ final class PrestashopProduct
     public ?\DateTimeInterface $dateUpd = null;
     public ?int $packStockType = null;
 
+    public function __construct()
+    {
+        $this->associations = new PrestashopAssociations();
+    }
+
     public function addDeliveryInStock(PrestashopItem $deliveryInStock): self
     {
         $this->deliveryInStock[] = $deliveryInStock;
