@@ -54,7 +54,7 @@ class PrestashopGetRequest extends PrestashopRequest
         return $this;
     }
 
-    public function addFilter(string $parameter, string $value): self
+    public function addFilter(string $parameter, string|int $value): self
     {
         $this->filter['filter[' . $parameter . ']'] = $value;
 
