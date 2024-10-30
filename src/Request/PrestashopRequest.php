@@ -18,7 +18,7 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
     private string $host;
 
     private string $key;
-    private bool $useKeyInQuery = false;
+    private array $query = [];
 
     public function __construct(string $host, string $key, string $resource)
     {
@@ -44,12 +44,14 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
 
     public function getQuery(): array
     {
-        if (true === $this->useKeyInQuery) {
-            return [
-                'ws_key' => $this->key,
-            ];
-        }
-        return [];
+        return $this->query;
+    }
+
+    public function addQuery(string $key, string $value): self
+    {
+        $this->query[$key] = $value;
+
+        return $this;
     }
 
     public function getHeaders(): array
@@ -79,7 +81,7 @@ abstract class PrestashopRequest extends ScraperRequest implements RequestAuthBa
 
     public function useKeyInQuery(): self
     {
-        $this->useKeyInQuery = true;
+        $this->query['ws_key'] = $this->key;
 
         return $this;
     }
