@@ -32,6 +32,6 @@ class PrestashopItemNormalizer implements DenormalizerInterface
 
     public function getSupportedTypes(?string $format): array
     {
-        return [PrestashopItem::class];
+        return ['*' => true];
     }
 }
