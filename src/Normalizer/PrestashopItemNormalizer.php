@@ -14,14 +14,32 @@ class PrestashopItemNormalizer implements DenormalizerInterface
      */
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
-        if (!\is_string($data)) {
-            return [];
+        if(PrestashopItem::class === $type && \is_string($data)) {
+            $prestashopItem = new PrestashopItem();
+            $prestashopItem
+                ->setValue($data)
+            ;
+            return $prestashopItem;
         }
-        $prestashopItem = new PrestashopItem();
-        $prestashopItem
-            ->setValue($data)
-        ;
-        return PrestashopItem::class === $type ? $prestashopItem : [$prestashopItem];
+
+        if(PrestashopItem::class === $type && \is_array($data)) {
+            $prestashopItem = new PrestashopItem();
+            $prestashopItem
+                ->setId((int) $data['id'])
+                ->setValue($data['value'])
+            ;
+            return $prestashopItem;
+        }
+
+        if(PrestashopItem::class."[]" === $type && \is_array($data)) {
+            $prestashopItems = array_values(array_filter(array_map(function ($item) {
+                return $this->denormalize($item, PrestashopItem::class);
+            }, $data)));
+
+            return $prestashopItems;
+        }
+
+        return PrestashopItem::class === $type ? null : [];
     }
 
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
