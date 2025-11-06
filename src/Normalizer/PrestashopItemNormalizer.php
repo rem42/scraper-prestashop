@@ -39,6 +39,14 @@ class PrestashopItemNormalizer implements DenormalizerInterface
             return $prestashopItems;
         }
 
+        if(PrestashopItem::class."[]" === $type && \is_string($data)) {
+            $prestashopItem = new PrestashopItem();
+            $prestashopItem
+                ->setValue($data)
+            ;
+            return [$prestashopItem];
+        }
+
         return PrestashopItem::class === $type ? null : [];
     }
 
