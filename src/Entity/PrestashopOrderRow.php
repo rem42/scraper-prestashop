@@ -21,6 +21,7 @@ final class PrestashopOrderRow
     public ?int $idConfig = null;
     public ?PrestashopPackagingDecoded $packagingDecoded = null;
     public ?string $packaging = null;
+    public ?int $idCustomization = null;
 
     public function setProductEan13(?string $productEan13): self
     {
