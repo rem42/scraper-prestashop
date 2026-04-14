@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity;
 
@@ -9,6 +11,7 @@ final class PrestashopGroup
     public function setId(?int $id): self
     {
         $this->id = $id;
+
         return $this;
     }
 }

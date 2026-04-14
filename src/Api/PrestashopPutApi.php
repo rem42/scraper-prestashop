@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Api;
 
@@ -21,6 +23,7 @@ class PrestashopPutApi extends PrestashopApi
         }
 
         $className = ResourceMapping::find($this->request);
+
         /** @var array<string, mixed> $data */
         $data = json_decode($content, true, 512, \JSON_THROW_ON_ERROR);
         $content = json_encode($data[ResourceMapping::singularize($this->request)], \JSON_THROW_ON_ERROR);

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tools;
 
@@ -461,12 +463,14 @@ class ResourceMapping
             if (!isset($resource['one'])) {
                 throw new PrestashopResouceMappingNotFoundException('cannot found one for this resource: ' . $prestashopRequest->getResource());
             }
+
             return $resource['one'];
         }
 
         if (!isset($resource['list'])) {
             throw new PrestashopResouceMappingNotFoundException('cannot found list for this resource: ' . $prestashopRequest->getResource());
         }
+
         return $resource['list'];
     }
 

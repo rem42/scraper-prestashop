@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Tests\Api;
 
@@ -66,6 +68,7 @@ class PrestashopStockAvailableApiTest extends AbstractPrestashopApiTestCase
                 $this->stringContains('https://website/api/stock_availables/'),
                 $this->callback(function ($options) {
                     $this->assertXmlStringEqualsXmlFile($this->fixturePath('stock_available.xml'), $options['body']);
+
                     return true;
                 })
             )

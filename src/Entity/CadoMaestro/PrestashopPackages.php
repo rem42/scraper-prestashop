@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity\CadoMaestro;
 
@@ -10,6 +12,7 @@ class PrestashopPackages
     public function addPackage(PrestashopPackage $package): self
     {
         $this->packages[] = $package;
+
         return $this;
     }
 }

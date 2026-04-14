@@ -13,9 +13,9 @@
     "rem42/scraper": "^3.2"
   },
   "require-dev": {
-    "rem42/php-cs-fixer-config": "^3.6",
-    "phpstan/phpstan": "^1.11",
-    "phpunit/phpunit": "^9.6"
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^13.1",
+    "rem42/php-cs-fixer-config": "^4.1"
   },
   "autoload": {
     "psr-4": {

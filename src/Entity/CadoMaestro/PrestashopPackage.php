@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity\CadoMaestro;
 
@@ -8,8 +10,10 @@ class PrestashopPackage
 {
     public ?int $id = null;
     public ?string $idPackageType = null;
+
     /** @var array<int, PrestashopItem> */
     public array $name = [];
+
     /** @var array<int, PrestashopItem> */
     public array $picto = [];
     public ?string $default = null;
@@ -20,12 +24,14 @@ class PrestashopPackage
     public function addName(PrestashopItem $name): self
     {
         $this->name[] = $name;
+
         return $this;
     }
 
     public function addPicto(PrestashopItem $picto): self
     {
         $this->picto[] = $picto;
+
         return $this;
     }
 }

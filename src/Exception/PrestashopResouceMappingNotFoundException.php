@@ -1,7 +1,7 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Exception;
 
-class PrestashopResouceMappingNotFoundException extends PrestashopException
-{
-}
+class PrestashopResouceMappingNotFoundException extends PrestashopException {}

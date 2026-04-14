@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Normalizer;
 
@@ -14,36 +16,37 @@ class PrestashopItemNormalizer implements DenormalizerInterface
      */
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
-        if(PrestashopItem::class === $type && \is_string($data)) {
+        if (PrestashopItem::class === $type && \is_string($data)) {
             $prestashopItem = new PrestashopItem();
             $prestashopItem
                 ->setValue($data)
             ;
+
             return $prestashopItem;
         }
 
-        if(PrestashopItem::class === $type && \is_array($data)) {
+        if (PrestashopItem::class === $type && \is_array($data)) {
             $prestashopItem = new PrestashopItem();
             $prestashopItem
                 ->setId((int) $data['id'])
                 ->setValue($data['value'])
             ;
+
             return $prestashopItem;
         }
 
-        if(PrestashopItem::class."[]" === $type && \is_array($data)) {
-            $prestashopItems = array_values(array_filter(array_map(function ($item) {
+        if (PrestashopItem::class . '[]' === $type && \is_array($data)) {
+            return array_values(array_filter(array_map(function ($item) {
                 return $this->denormalize($item, PrestashopItem::class);
             }, $data)));
-
-            return $prestashopItems;
         }
 
-        if(PrestashopItem::class."[]" === $type && \is_string($data)) {
+        if (PrestashopItem::class . '[]' === $type && \is_string($data)) {
             $prestashopItem = new PrestashopItem();
             $prestashopItem
                 ->setValue($data)
             ;
+
             return [$prestashopItem];
         }
 

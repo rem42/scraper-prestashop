@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity;
 
@@ -17,54 +19,63 @@ final class PrestashopOrderCarrier
     public function setId(?int $id): self
     {
         $this->id = $id;
+
         return $this;
     }
 
     public function setIdOrder(?int $idOrder): self
     {
         $this->idOrder = $idOrder;
+
         return $this;
     }
 
     public function setIdCarrier(?int $idCarrier): self
     {
         $this->idCarrier = $idCarrier;
+
         return $this;
     }
 
     public function setIdOrderInvoice(?int $idOrderInvoice): self
     {
         $this->idOrderInvoice = $idOrderInvoice;
+
         return $this;
     }
 
     public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
+
         return $this;
     }
 
     public function setShippingCostTaxExcl(?float $shippingCostTaxExcl): self
     {
         $this->shippingCostTaxExcl = $shippingCostTaxExcl;
+
         return $this;
     }
 
     public function setShippingCostTaxIncl(?float $shippingCostTaxIncl): self
     {
         $this->shippingCostTaxIncl = $shippingCostTaxIncl;
+
         return $this;
     }
 
     public function setTrackingNumber(?string $trackingNumber): self
     {
         $this->trackingNumber = $trackingNumber;
+
         return $this;
     }
 
     public function setDateAdd(?\DateTimeInterface $dateAdd): self
     {
         $this->dateAdd = $dateAdd;
+
         return $this;
     }
 }

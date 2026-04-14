@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity;
 
@@ -10,12 +12,14 @@ final class PrestashopPost
     public function setOrderHistory(?PrestashopOrderHistory $orderHistory): self
     {
         $this->orderHistory = $orderHistory;
+
         return $this;
     }
 
     public function setStockAvailable(?PrestashopStockAvailable $stockAvailable): self
     {
         $this->stockAvailable = $stockAvailable;
+
         return $this;
     }
 }

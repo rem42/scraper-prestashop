@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Entity;
 
@@ -14,16 +16,22 @@ final class PrestashopCategory
     public ?int $position = null;
     public ?\DateTimeInterface $dateAdd = null;
     public ?\DateTimeInterface $dateUpd = null;
+
     /** @var array<int, PrestashopItem> */
     public array $name = [];
+
     /** @var array<int, PrestashopItem> */
     public array $linkRewrite = [];
+
     /** @var array<int, PrestashopItem> */
     public array $description = [];
+
     /** @var array<int, PrestashopItem> */
     public array $metaTitle = [];
+
     /** @var array<int, PrestashopItem> */
     public array $metaDescription = [];
+
     /** @var array<int, PrestashopItem> */
     public array $metaKeywords = [];
 

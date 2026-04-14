@@ -1,8 +1,9 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperPrestashop\Normalizer;
 
-use Scraper\ScraperPrestashop\Entity\PrestashopItem;
 use Scraper\ScraperPrestashop\Entity\Rem42Webservices\Tnt\PrestashopTntOfficielDeliveryPoint;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -25,6 +26,7 @@ class PrestashopDeliveryPointNormalizer implements DenormalizerInterface
             return $data;
         }
         $data = unserialize($data, [PrestashopTntOfficielDeliveryPoint::class]);
+
         return $this->normalizer->denormalize($data, PrestashopTntOfficielDeliveryPoint::class);
     }
 
